@@ -231,6 +231,48 @@ class HomeFragment : Fragment() {
 
         binding.questionTitleA2.text = "А2. по пройденной дистанции ТШХ (метр)  _Z__м\n" + "ТШХ "
 
+        // Radio gruoplarga text beramiz
+        binding.A1question1RadioButton1.text = "0 – нет"
+        binding.A1question1RadioButton2.text = "1 – при нагрузке"
+        binding.A1question1RadioButton3.text = "2 – в покое"
+
+        binding.A1question2RadioButton1.text = "0 – нет"
+        binding.A1question2RadioButton2.text = "1 – увеличился"
+
+        binding.A1question3RadioButton1.text = "0 – нет"
+        binding.A1question3RadioButton2.text = "1 – есть"
+
+        binding.A1question4RadioButton1.text = "0 – горизонтально"
+        binding.A1question4RadioButton2.text = "1 – с приподнятым головным концом (2 подушки)"
+        binding.A1question4RadioButton3.text = "2 – плюс просыпается от удушья"
+        binding.A1question4RadioButton4.text = "3 – сидя"
+
+        binding.A1question5RadioButton1.text = "0 – нет"
+        binding.A1question5RadioButton2.text = "1 – лежа"
+        binding.A1question5RadioButton3.text = "2 – стоя"
+
+        binding.A1question6RadioButton1.text = "0 – нет"
+        binding.A1question6RadioButton2.text = "1 – нижние отделы (до 1/3)"
+        binding.A1question6RadioButton3.text = "2 – до лопаток (до 2/3)"
+        binding.A1question6RadioButton4.text = "3 – над всей поверхностью легких"
+
+        binding.A1question7RadioButton1.text = "0 – нет"
+        binding.A1question7RadioButton2.text = "1 – есть"
+
+        binding.A1question8RadioButton1.text = "0 – не увеличена"
+        binding.A1question8RadioButton2.text = "1 – до 5 см"
+        binding.A1question8RadioButton3.text = "2 – более 5 см"
+
+        binding.A1question9RadioButton1.text = "0 – нет"
+        binding.A1question9RadioButton2.text = "1 – пастозность"
+        binding.A1question9RadioButton3.text = "2 – отеки"
+        binding.A1question9RadioButton4.text = "3 – анасарка"
+
+        binding.A1question10RadioButton1.text = "0 – > 120"
+        binding.A1question10RadioButton2.text = "1 – 100-120"
+        binding.A1question10RadioButton3.text = "2 – < 100 мм рт.ст."
+
+
 
 
         binding.a2RadioButton1.text = "I. ФК >551м"
