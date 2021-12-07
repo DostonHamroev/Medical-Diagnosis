@@ -231,6 +231,8 @@ class HomeFragment : Fragment() {
 
         binding.questionTitleA2.text = "А2. по пройденной дистанции ТШХ (метр)  _Z__м\n" + "ТШХ "
 
+
+
         binding.a2RadioButton1.text = "I. ФК >551м"
         binding.a2RadioButton2.text = "II ФК 426-550м"
         binding.a2RadioButton3.text = "III ФК 301-425м"

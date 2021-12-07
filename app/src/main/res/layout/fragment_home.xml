@@ -205,6 +205,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question1_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -213,6 +214,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question1_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -227,6 +229,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question1_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -241,6 +244,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question1_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -317,6 +321,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question2_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -325,6 +330,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question2_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -340,6 +346,7 @@
 
 
                                             <RadioButton
+                                                android:id="@+id/A1question2_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -416,6 +423,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question3_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -424,6 +432,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question3_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -438,6 +447,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question3_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -514,6 +524,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question4_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -522,6 +533,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question4_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -536,6 +548,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question4_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -550,6 +563,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question4_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -564,6 +578,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question4_RadioButton4"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -640,6 +655,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question5_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -648,6 +664,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question5_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -662,6 +679,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question5_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -676,6 +694,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question5_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -752,6 +771,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question6_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -760,6 +780,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question6_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -774,6 +795,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question6_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -788,6 +810,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question6_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -802,6 +825,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question6_RadioButton4"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -878,6 +902,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question7_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -886,6 +911,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question7_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -901,6 +927,7 @@
 
 
                                             <RadioButton
+                                                android:id="@+id/A1question7_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -977,6 +1004,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question8_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -985,6 +1013,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question8_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -999,6 +1028,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question8_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1013,6 +1043,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question8_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1089,6 +1120,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question9_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -1097,6 +1129,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question9_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1111,6 +1144,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question9_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1125,6 +1159,22 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question9_RadioButton3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:id="@+id/A1question9_RadioButton4"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1201,6 +1251,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/A1question10_RadioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -1209,6 +1260,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/A1question10_RadioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1223,6 +1275,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question10_RadioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1237,6 +1290,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/A1question10_RadioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
