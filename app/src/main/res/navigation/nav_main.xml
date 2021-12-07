@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_homeFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_natijalarFragment"
+            app:destination="@id/natijalarFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="uz.hamroev.medicaldiagnosis.fragment.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/natijalarFragment"
+        android:name="uz.hamroev.medicaldiagnosis.fragment.NatijalarFragment"
+        android:label="fragment_natijalar"
+        tools:layout="@layout/fragment_natijalar" />
 </navigation>

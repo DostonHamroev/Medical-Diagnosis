@@ -5,39 +5,52 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Home" />
+        android:icon="@drawable/ic_home"
+        android:title="Asosiy" />
 
     <item
         android:id="@+id/resultFragment"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Result" />
+        android:icon="@drawable/ic_results"
+        android:title="Natijalar" />
 
     <item
         android:id="@+id/nav_settings"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Settings" />
+        android:icon="@drawable/ic_settings_language"
+        android:title="Sozlash" />
 
-    <item android:title="Ilova haqida">
+    <item android:title="Ulashish">
 
         <menu>
 
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_launcher_background"
-                android:title="Share" />
+                android:icon="@drawable/ic_share"
+                android:title="Ulashish" />
 
             <item
                 android:id="@+id/nav_rate"
-                android:icon="@drawable/ic_launcher_background"
-                android:title="Rate us" />
-
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_launcher_background"
-                android:title="About App" />
+                android:icon="@drawable/ic_rate"
+                android:title="Baholash" />
 
         </menu>
 
     </item>
+
+    <item android:title="Ilova haqida">
+        <menu>
+
+            <item
+                android:id="@+id/nav_opinion"
+                android:icon="@drawable/ic_opinion"
+                android:title="Taklif bildirish" />
+
+             <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="Ilova haqida" />
+
+
+        </menu>
+    </item>
+
 </menu>

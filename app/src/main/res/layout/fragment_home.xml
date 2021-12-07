@@ -1,16 +1,2609 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragment.HomeFragment">
 
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="32sp"
-        android:textColor="@color/black"
-        android:text="HomeFragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!--    Top Linear Layout        -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_main_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="surunkali yurak yetishmovchiligi bilan xastalangan bemorlarda buyrak disfunksiyani erta aniqlash va prognozlash"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
+
+            <!--        A block-->
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="visible"
+                app:sl_shadow_color="#2196F3"
+                app:sl_shadow_distance="10dp"
+                app:sl_shadowed="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_a_gradient">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="16dp"
+                            android:gravity="center"
+                            android:text="A. определите функционалный класс ХСН"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.gigamole.library.ShadowLayout>
+            <!--        A1 block down | A1 bo'lim pastda    -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/a1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingLeft="5dp"
+                                android:text="A1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--                    bottom main body | savollar berib boriladigan qismi-->
+                    <LinearLayout
+                        android:id="@+id/bottom_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/a1_bottom_shape"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main">
+
+                        <!-- har bir savol uchun card viewni ichida radio buttonlar -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <!--        A2 block down | A2 bo'lim pastda -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_a2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/a1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="A2. по пройденной дистанции ТШХ "
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_a2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_a2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/a1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_a2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="A2. по пройденной дистанции ТШХ  "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingStart="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingStart="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingStart="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingStart="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+            <!--            B block-->
+            <com.gigamole.library.ShadowLayout
+                android:id="@+id/shadowB"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="visible"
+                app:sl_shadow_angle="45"
+                android:layout_margin="5dp"
+                app:sl_shadow_color="#3783D5"
+                app:sl_shadowed="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_b_gradient">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="16dp"
+                            android:gravity="center"
+                            android:text="B. определите klinitecheskiy  класс ХСН"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.gigamole.library.ShadowLayout>
+            <!--            B1 block down | B1 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_b1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_b1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="B1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_b1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_b1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_b1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="В1. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <!--            B2 block down | B2 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_b2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_b2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="B1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_b2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_b2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_b2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="В1. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <!--            B3 block down | B3 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_b3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_b3"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="B1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_b3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_b3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_b3">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="В1. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+            <!--            C block-->
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="visible"
+                app:sl_shadow_color="#D47CEC"
+                app:sl_shadow_distance="5dp"
+                app:sl_shadowed="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_c_gradient">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="16dp"
+                            android:gravity="center"
+                            android:text="C. определите klinitecheskiy  класс ХСН"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.gigamole.library.ShadowLayout>
+            <!--            C1 block down | C1 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_c1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_c1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="C1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_c1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_c1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_c1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="В1. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <!--            C2 block down | C2 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_c2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_c2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="B1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_c2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_c2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_c2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="C2. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+            <!--            D block-->
+            <com.gigamole.library.ShadowLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="visible"
+                app:sl_shadow_color="#26DAE1"
+                app:sl_shadow_distance="10dp"
+                app:sl_shadowed="true">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/back_b_gradient">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="16dp"
+                            android:gravity="center"
+                            android:text="D. определите klinitecheskiy  класс ХСН"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.gigamole.library.ShadowLayout>
+            <!--            D1 block down | D1 bo'lim pastda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/top_title_main_d1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_top_shape"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toTopOf="@id/bottom_body_d1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:text="D1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/down_to_up_lottie_d1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                app:lottie_autoPlay="true"
+                                app:lottie_fileName="down.json"
+                                app:lottie_loop="true" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_body_d1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b1_bottom_shape"
+                        android:orientation="vertical"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/top_title_main_d1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_margin="10dp"
+                                    android:gravity="start"
+                                    android:text="D1. Клинические признаки недостаточности малого круга кровообращения(не менее 3х признаков)"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+                                <!--                                check box uchun-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="8" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Одышка" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Ортопноэ" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Хрипы в легких" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахикардия" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Тахипное" />
+
+                                        <CheckBox
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="2dp"
+                                            android:paddingStart="10dp"
+                                            android:text="Сухой кашель" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

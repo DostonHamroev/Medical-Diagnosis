@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
 import com.google.android.material.navigation.NavigationView
 import uz.hamroev.medicaldiagnosis.R
+import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -23,9 +24,11 @@ class HomeActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(binding.root)
 
+        Cache.init(this)
         val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
         val navView: NavigationView = findViewById(R.id.nav_view)
 
+        checkLanguage()
 
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -33,8 +36,7 @@ class HomeActivity : AppCompatActivity() {
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //supportActionBar?.setHomeButtonEnabled(true)
-        // supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
-        supportActionBar?.title = "Diagnostic"
+        supportActionBar?.title = "Medical - Diagnostic"
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_share -> Toast.makeText(applicationContext, "Share", Toast.LENGTH_SHORT)
@@ -52,6 +54,32 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
+
+    }
+
+    private fun checkLanguage() {
+        when (Cache.til) {
+            "uz" -> {
+                loadUzData()
+            }
+            "krill" -> {
+                loadKrillData()
+            }
+            "ru" -> {
+                loadRuData()
+            }
+        }
+    }
+
+    private fun loadRuData() {
+
+    }
+
+    private fun loadKrillData() {
+
+    }
+
+    private fun loadUzData() {
 
     }
 

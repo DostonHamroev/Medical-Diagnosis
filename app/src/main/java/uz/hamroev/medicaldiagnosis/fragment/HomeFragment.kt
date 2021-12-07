@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
+import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -31,15 +33,65 @@ class HomeFragment : Fragment() {
     }
 
     lateinit var binding: FragmentHomeBinding
+    var isOpen = true
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        Cache.init(binding.root.context)
 
+        checkLanguage()
+
+        binding.downToUpLottie.setOnClickListener {
+            if (isOpen){
+                binding.downToUpLottie.setAnimation("up.json")
+                binding.downToUpLottie.playAnimation()
+                binding.downToUpLottie.setPadding(0)
+                binding.bottomBody.visibility = View.GONE
+                isOpen = false
+            } else if (!isOpen){
+                binding.downToUpLottie.setAnimation("down.json")
+                binding.downToUpLottie.playAnimation()
+                binding.downToUpLottie.setPadding(10)
+                binding.bottomBody.visibility = View.VISIBLE
+                isOpen =  true
+            }
+
+
+        }
 
         return binding.root
     }
+
+    private fun checkLanguage() {
+        when (Cache.til) {
+            "uz" -> {
+                loadUzData()
+            }
+            "krill" -> {
+                loadKrillData()
+            }
+            "ru" -> {
+                loadRuData()
+            }
+        }
+    }
+
+    private fun loadRuData() {
+
+    }
+
+    private fun loadKrillData() {
+
+    }
+
+    private fun loadUzData() {
+
+    }
+
+
 
     companion object {
         /**

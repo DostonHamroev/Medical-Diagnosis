@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import uz.hamroev.medicaldiagnosis.activity.HomeActivity
@@ -22,12 +23,24 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-
         supportActionBar?.hide()
+
+        startAnimation()
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
-        }, 2500)
+        }, 3650)
+    }
+
+
+    private fun startAnimation() {
+        binding.lottieIntro.setAnimation("heartbeatline.json")
+        binding.typeWriter.setCharacterDeley(60)
+        binding.typeWriter.animateText("Medical \nDiagnosis")
+        val animIntroVersion = AnimationUtils.loadAnimation(this, R.anim.anim_intro_version)
+        val animIntroTeamName = AnimationUtils.loadAnimation(this, R.anim.anim_intro_team_name)
+        binding.versionTV.startAnimation(animIntroVersion)
+        binding.teamNameTV.startAnimation(animIntroTeamName)
     }
 }
