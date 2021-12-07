@@ -25,6 +25,7 @@
                 android:background="@drawable/top_main_layout">
 
                 <TextView
+                    android:id="@+id/title_Main_home"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -66,6 +67,7 @@
                         android:background="@drawable/back_a_gradient">
 
                         <TextView
+                            android:id="@+id/title_main_A"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -83,8 +85,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:visibility="visible">
+                android:layout_margin="10dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -108,6 +109,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_A1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -145,7 +147,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/a1_bottom_shape"
                         android:orientation="vertical"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main">
@@ -164,6 +166,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/A1question1"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
@@ -275,12 +278,336 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/A1question2"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     android:fontFamily="@font/source_sand_pro_regular"
                                     android:padding="5dp"
                                     android:text="1. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/A1question3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="3. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/A1question4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="4. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/A1question5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="5. Одышка: "
                                     android:textColor="@color/black"
                                     android:textSize="25sp"
                                     android:textStyle="bold" />
@@ -386,12 +713,238 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/A1question6"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     android:fontFamily="@font/source_sand_pro_regular"
                                     android:padding="5dp"
-                                    android:text="1. Одышка: "
+                                    android:text="6. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="1 - при нагрузки"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/A1question7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="7. Одышка: "
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="#DDD" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="10" />
+
+                                    <!--                                    Radio gruop shuni ichida-->
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="start"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:padding="10dp">
+
+                                        <RadioGroup
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="start"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="start"
+                                            android:orientation="vertical">
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="0 - нет"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+
+                                            <RadioButton
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="4dp"
+                                                android:background="@drawable/radio_selector"
+                                                android:button="@android:color/transparent"
+                                                android:checked="false"
+                                                android:elevation="2dp"
+                                                android:paddingLeft="10dp"
+                                                android:text="2 - в покое"
+                                                android:textColor="@drawable/radio_text"
+                                                android:textSize="20sp" />
+
+                                        </RadioGroup>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/A1question8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:fontFamily="@font/source_sand_pro_regular"
+                                    android:padding="5dp"
+                                    android:text="8. Одышка: "
                                     android:textColor="@color/black"
                                     android:textSize="25sp"
                                     android:textStyle="bold" />
@@ -497,12 +1050,13 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/A1question9"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     android:fontFamily="@font/source_sand_pro_regular"
                                     android:padding="5dp"
-                                    android:text="1. Одышка: "
+                                    android:text="9. Одышка: "
                                     android:textColor="@color/black"
                                     android:textSize="25sp"
                                     android:textStyle="bold" />
@@ -608,567 +1162,13 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/A1question10"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
                                     android:fontFamily="@font/source_sand_pro_regular"
                                     android:padding="5dp"
-                                    android:text="1. Одышка: "
-                                    android:textColor="@color/black"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="#DDD" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="10" />
-
-                                    <!--                                    Radio gruop shuni ichida-->
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="start"
-                                        android:layout_weight="1"
-                                        android:gravity="start"
-                                        android:padding="10dp">
-
-                                        <RadioGroup
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="start"
-                                            android:layout_marginTop="10dp"
-                                            android:gravity="start"
-                                            android:orientation="vertical">
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="0 - нет"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="1 - при нагрузки"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="2 - в покое"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                        </RadioGroup>
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:fontFamily="@font/source_sand_pro_regular"
-                                    android:padding="5dp"
-                                    android:text="1. Одышка: "
-                                    android:textColor="@color/black"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="#DDD" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="10" />
-
-                                    <!--                                    Radio gruop shuni ichida-->
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="start"
-                                        android:layout_weight="1"
-                                        android:gravity="start"
-                                        android:padding="10dp">
-
-                                        <RadioGroup
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="start"
-                                            android:layout_marginTop="10dp"
-                                            android:gravity="start"
-                                            android:orientation="vertical">
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="0 - нет"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="1 - при нагрузки"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="2 - в покое"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                        </RadioGroup>
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:fontFamily="@font/source_sand_pro_regular"
-                                    android:padding="5dp"
-                                    android:text="1. Одышка: "
-                                    android:textColor="@color/black"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="#DDD" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="10" />
-
-                                    <!--                                    Radio gruop shuni ichida-->
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="start"
-                                        android:layout_weight="1"
-                                        android:gravity="start"
-                                        android:padding="10dp">
-
-                                        <RadioGroup
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="start"
-                                            android:layout_marginTop="10dp"
-                                            android:gravity="start"
-                                            android:orientation="vertical">
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="0 - нет"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="1 - при нагрузки"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="2 - в покое"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                        </RadioGroup>
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:fontFamily="@font/source_sand_pro_regular"
-                                    android:padding="5dp"
-                                    android:text="1. Одышка: "
-                                    android:textColor="@color/black"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="#DDD" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="10" />
-
-                                    <!--                                    Radio gruop shuni ichida-->
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="start"
-                                        android:layout_weight="1"
-                                        android:gravity="start"
-                                        android:padding="10dp">
-
-                                        <RadioGroup
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="start"
-                                            android:layout_marginTop="10dp"
-                                            android:gravity="start"
-                                            android:orientation="vertical">
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="0 - нет"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="1 - при нагрузки"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="2 - в покое"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                        </RadioGroup>
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:fontFamily="@font/source_sand_pro_regular"
-                                    android:padding="5dp"
-                                    android:text="1. Одышка: "
-                                    android:textColor="@color/black"
-                                    android:textSize="25sp"
-                                    android:textStyle="bold" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:background="#DDD" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="10" />
-
-                                    <!--                                    Radio gruop shuni ichida-->
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="start"
-                                        android:layout_weight="1"
-                                        android:gravity="start"
-                                        android:padding="10dp">
-
-                                        <RadioGroup
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="start"
-                                            android:layout_marginTop="10dp"
-                                            android:gravity="start"
-                                            android:orientation="vertical">
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="0 - нет"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="1 - при нагрузки"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                            <RadioButton
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_gravity="center"
-                                                android:layout_margin="4dp"
-                                                android:background="@drawable/radio_selector"
-                                                android:button="@android:color/transparent"
-                                                android:checked="false"
-                                                android:elevation="2dp"
-                                                android:paddingLeft="10dp"
-                                                android:text="2 - в покое"
-                                                android:textColor="@drawable/radio_text"
-                                                android:textSize="20sp" />
-
-                                        </RadioGroup>
-
-                                    </LinearLayout>
-
-
-                                </LinearLayout>
-
-
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="5dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:fontFamily="@font/source_sand_pro_regular"
-                                    android:padding="5dp"
-                                    android:text="1. Одышка: "
+                                    android:text="10. Одышка: "
                                     android:textColor="@color/black"
                                     android:textSize="25sp"
                                     android:textStyle="bold" />
@@ -1296,6 +1296,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_A2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -1332,6 +1333,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/a1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_a2">
@@ -1349,6 +1351,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/questionTitleA2"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
@@ -1387,6 +1390,7 @@
                                         android:padding="10dp">
 
                                         <RadioGroup
+                                            android:id="@+id/a2_radioGroup"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="start"
@@ -1395,6 +1399,7 @@
                                             android:orientation="vertical">
 
                                             <RadioButton
+                                                android:id="@+id/a2_radioButton1"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1409,6 +1414,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/a2_radioButton2"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1423,6 +1429,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/a2_radioButton3"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1437,6 +1444,7 @@
                                                 android:textSize="20sp" />
 
                                             <RadioButton
+                                                android:id="@+id/a2_radioButton4"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
                                                 android:layout_gravity="center"
@@ -1469,15 +1477,23 @@
 
             </LinearLayout>
 
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
 
             <!--            B block-->
             <com.gigamole.library.ShadowLayout
                 android:id="@+id/shadowB"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="200dp"
+                android:layout_margin="5dp"
                 android:visibility="visible"
                 app:sl_shadow_angle="45"
-                android:layout_margin="5dp"
                 app:sl_shadow_color="#3783D5"
                 app:sl_shadowed="true">
 
@@ -1494,6 +1510,7 @@
                         android:background="@drawable/back_b_gradient">
 
                         <TextView
+                            android:id="@+id/title_main_B"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -1534,6 +1551,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_B1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -1569,6 +1587,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_b1">
@@ -1704,6 +1723,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_B2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -1739,6 +1759,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_b2">
@@ -1874,12 +1895,13 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_B3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
                                 android:gravity="start"
                                 android:paddingStart="5dp"
-                                android:text="B1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                                android:text="B3. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
                                 android:textColor="@color/black" />
                         </LinearLayout>
 
@@ -1909,6 +1931,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_b3">
@@ -2018,13 +2041,21 @@
 
             </LinearLayout>
 
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
 
             <!--            C block-->
             <com.gigamole.library.ShadowLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:visibility="visible"
-                app:sl_shadow_color="#D47CEC"
+                app:sl_shadow_color="#2114E4"
                 app:sl_shadow_distance="5dp"
                 app:sl_shadowed="true">
 
@@ -2038,9 +2069,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/back_c_gradient">
+                        android:background="@drawable/back_a_gradient">
 
                         <TextView
+                            android:id="@+id/title_main_C"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2068,7 +2100,7 @@
                         android:id="@+id/top_title_main_c1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/b1_top_shape"
+                        android:background="@drawable/a1_top_shape"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toTopOf="@id/bottom_body_c1"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -2081,6 +2113,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_C1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -2114,8 +2147,9 @@
                         android:id="@+id/bottom_body_c1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/b1_bottom_shape"
+                        android:background="@drawable/a1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_c1">
@@ -2238,7 +2272,7 @@
                         android:id="@+id/top_title_main_c2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/b1_top_shape"
+                        android:background="@drawable/a1_top_shape"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toTopOf="@id/bottom_body_c2"
                         app:layout_constraintLeft_toLeftOf="parent"
@@ -2251,6 +2285,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_C2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -2284,8 +2319,9 @@
                         android:id="@+id/bottom_body_c2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/b1_bottom_shape"
+                        android:background="@drawable/a1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_c2">
@@ -2395,11 +2431,19 @@
 
             </LinearLayout>
 
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
 
             <!--            D block-->
             <com.gigamole.library.ShadowLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="165dp"
                 android:visibility="visible"
                 app:sl_shadow_color="#26DAE1"
                 app:sl_shadow_distance="10dp"
@@ -2418,6 +2462,7 @@
                         android:background="@drawable/back_b_gradient">
 
                         <TextView
+                            android:id="@+id/title_main_D"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -2459,6 +2504,7 @@
                             android:layout_weight="1">
 
                             <TextView
+                                android:id="@+id/title_D1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="12dp"
@@ -2494,6 +2540,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/b1_bottom_shape"
                         android:orientation="vertical"
+                        android:visibility="gone"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/top_title_main_d1">
@@ -2602,6 +2649,16 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
+
+            <!-- Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
+
 
 
         </LinearLayout>
