@@ -218,6 +218,8 @@ class HomeFragment : Fragment() {
         binding.titleC2.text = "С2. Поздние признаки ДП (не менее 2х признаков)"
         binding.titleD1.text = "D.  Определение тяжести течения дисфункции почек  по Скорости клубочковой фильтрации"
 
+
+
         binding.A1question1.text = "1. Одышка: "
         binding.A1question2.text = "2. Изменился ли за последнюю неделю вес:"
         binding.A1question3.text = "3. Жалобы на перебои в работе сердца: "
@@ -279,6 +281,59 @@ class HomeFragment : Fragment() {
         binding.a2RadioButton2.text = "II ФК 426-550м"
         binding.a2RadioButton3.text = "III ФК 301-425м"
         binding.a2RadioButton4.text = "IV ФК менее 300м"
+
+        /*  har bir bo'lim savol nomi B1 B2 B3 C1 C2 D bo'lim savol nomalri bo'ladi checkbox ni tepasidagi savol titlelar */
+        binding.titleQuestionB1.text = "В1. Клинические признаки недостаточности малого круга кровообращения \n" +
+                "(не менее 3х признаков)"
+        binding.titleQuestionB2.text = "В2.  Клинические признаки недостаточности большого круга кровообращения\n" +
+                " (не менее 2х признаков)"
+        binding.titleQuestionB3.text = "В3. Общие признаки Хронической сердечной недостаточности \n" +
+                "(не менее 3х признаков)"
+
+        binding.titleQuestionC1.text = "С1. Ранние признаки ДП (не менее 3х признаков):"
+        binding.titleQuestionC2.text = "С2. Поздние признаки ДП (не менее 2х признаков):"
+
+        binding.D1question.text = "D.  Определение тяжести течения дисфункции почек  по Скорости клубочковой фильтрации"
+
+
+        binding.b1CheckBox1.text = "Одышка"
+        binding.b1CheckBox2.text = "Ортопноэ"
+        binding.b1CheckBox3.text = "Хрипы в легких"
+        binding.b1CheckBox4.text = "Тахикардия"
+        binding.b1CheckBox5.text = "Тахипное"
+        binding.b1CheckBox6.text = "Сухой кашель"
+
+        binding.b2CheckBox1.text = "Тяжесть в нижних конечностях"
+        binding.b2CheckBox2.text = "Тяжесть в правом подреберье"
+        binding.b2CheckBox3.text = "Гепатомегалия"
+        binding.b2CheckBox4.text = "Асцит"
+
+        binding.b3CheckBox1.text = "Утомляемость"
+        binding.b3CheckBox2.text = "Слабость"
+        binding.b3CheckBox3.text = "Снижение памяти"
+        binding.b3CheckBox4.text = "Снижение аппетита"
+        binding.b3CheckBox5.text = "Сухость и бледность кожных покровов"
+        binding.b3CheckBox6.text = "Снижение массы тела"
+        binding.b3CheckBox7.text = "Тошнота "
+        binding.b3CheckBox8.text = "Нарушение сна"
+
+        binding.c1CheckBox1.text = "Никтурия"
+        binding.c1CheckBox2.text = "Олигоурия"
+        binding.c1CheckBox3.text = "Отеки в нижних конечностях, лица и рук"
+        binding.c1CheckBox4.text = "Апатия"
+        binding.c1CheckBox5.text = "Слабость"
+        binding.c1CheckBox6.text = "Жажда"
+
+        binding.c2CheckBox1.text = "Постоянное чувство тошноты"
+        binding.c2CheckBox2.text = "Судорги"
+        binding.c2CheckBox3.text = "Чувство холода"
+        binding.c2CheckBox4.text = "Извращение вкуса"
+        binding.c2CheckBox5.text = "Снижение либидо"
+
+        binding.D1questionRadioButton1.text = "Д1 = рСКФ  более 90 мл/мин/1,73 м²"
+        binding.D1questionRadioButton2.text = "Д2  = рСКФ  90-60 мл/мин/1,73 м²"
+        binding.D1questionRadioButton3.text = "Д3 =  рСКФ  менеее 60 мл/мин/1,73 м²"
+
 
 
 
