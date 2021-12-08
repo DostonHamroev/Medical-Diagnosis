@@ -341,6 +341,134 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadKrillData() {
+        binding.titleMainHome.text = ""
+        binding.titleMainA.text = ""
+        binding.titleMainB.text = ""
+        binding.titleMainC.text = ""
+        binding.titleMainD.text = ""
+
+        binding.titleA1.text = ""
+        binding.titleA2.text = ""
+        binding.titleB1.text = ""
+        binding.titleB2.text = ""
+        binding.titleB3.text = ""
+        binding.titleC1.text = ""
+        binding.titleC2.text = ""
+        binding.titleD1.text = ""
+
+
+
+        binding.A1question1.text = ""
+        binding.A1question2.text = ""
+        binding.A1question3.text = ""
+        binding.A1question4.text = ""
+        binding.A1question5.text = ""
+        binding.A1question6.text = ""
+        binding.A1question7.text = ""
+        binding.A1question8.text = ""
+        binding.A1question9.text = ""
+        binding.A1question10.text = ""
+
+        binding.questionTitleA2.text = ""
+
+        // Radio gruoplarga text beramiz
+        binding.A1question1RadioButton1.text = ""
+        binding.A1question1RadioButton2.text = ""
+        binding.A1question1RadioButton3.text = ""
+
+        binding.A1question2RadioButton1.text = ""
+        binding.A1question2RadioButton2.text = ""
+
+        binding.A1question3RadioButton1.text = ""
+        binding.A1question3RadioButton2.text = ""
+
+        binding.A1question4RadioButton1.text = ""
+        binding.A1question4RadioButton2.text = ""
+        binding.A1question4RadioButton3.text = ""
+        binding.A1question4RadioButton4.text = ""
+
+        binding.A1question5RadioButton1.text = ""
+        binding.A1question5RadioButton2.text = ""
+        binding.A1question5RadioButton3.text = ""
+
+        binding.A1question6RadioButton1.text = ""
+        binding.A1question6RadioButton2.text = ""
+        binding.A1question6RadioButton3.text = ""
+        binding.A1question6RadioButton4.text = ""
+
+        binding.A1question7RadioButton1.text = ""
+        binding.A1question7RadioButton2.text = ""
+
+        binding.A1question8RadioButton1.text = ""
+        binding.A1question8RadioButton2.text = ""
+        binding.A1question8RadioButton3.text = ""
+
+        binding.A1question9RadioButton1.text = ""
+        binding.A1question9RadioButton2.text = ""
+        binding.A1question9RadioButton3.text = ""
+        binding.A1question9RadioButton4.text = ""
+
+        binding.A1question10RadioButton1.text = ""
+        binding.A1question10RadioButton2.text = ""
+        binding.A1question10RadioButton3.text = ""
+
+
+
+
+        binding.a2RadioButton1.text = ""
+        binding.a2RadioButton2.text = ""
+        binding.a2RadioButton3.text = ""
+        binding.a2RadioButton4.text = ""
+
+        /*  har bir bo'lim savol nomi B1 B2 B3 C1 C2 D bo'lim savol nomalri bo'ladi checkbox ni tepasidagi savol titlelar */
+        binding.titleQuestionB1.text = ""
+        binding.titleQuestionB2.text = ""
+        binding.titleQuestionB3.text = ""
+
+        binding.titleQuestionC1.text = ""
+        binding.titleQuestionC2.text = ""
+
+        binding.D1question.text = ""
+
+
+        binding.b1CheckBox1.text = ""
+        binding.b1CheckBox2.text = ""
+        binding.b1CheckBox3.text = ""
+        binding.b1CheckBox4.text = ""
+        binding.b1CheckBox5.text = ""
+        binding.b1CheckBox6.text = ""
+
+        binding.b2CheckBox1.text = ""
+        binding.b2CheckBox2.text = ""
+        binding.b2CheckBox3.text = ""
+        binding.b2CheckBox4.text = ""
+
+        binding.b3CheckBox1.text = ""
+        binding.b3CheckBox2.text = ""
+        binding.b3CheckBox3.text = ""
+        binding.b3CheckBox4.text = ""
+        binding.b3CheckBox5.text = ""
+        binding.b3CheckBox6.text = ""
+        binding.b3CheckBox7.text = ""
+        binding.b3CheckBox8.text = ""
+
+        binding.c1CheckBox1.text = ""
+        binding.c1CheckBox2.text = ""
+        binding.c1CheckBox3.text = ""
+        binding.c1CheckBox4.text = ""
+        binding.c1CheckBox5.text = ""
+        binding.c1CheckBox6.text = ""
+
+        binding.c2CheckBox1.text = ""
+        binding.c2CheckBox2.text = ""
+        binding.c2CheckBox3.text = ""
+        binding.c2CheckBox4.text = ""
+        binding.c2CheckBox5.text = ""
+
+        binding.D1questionRadioButton1.text = ""
+        binding.D1questionRadioButton2.text = ""
+        binding.D1questionRadioButton3.text = ""
+
 
     }
 

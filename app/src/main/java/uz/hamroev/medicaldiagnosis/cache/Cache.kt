@@ -19,10 +19,10 @@ object Cache {
     }
 
     var til:String?
-        get() = sharedPreferences.getString("til","ru")
+        get() = sharedPreferences.getString("til1","ru")
         set(value) = Cache.sharedPreferences.edit() {
             if (value != null){
-                it.putString("til",value)
+                it.putString("til1",value)
             }
         }
 

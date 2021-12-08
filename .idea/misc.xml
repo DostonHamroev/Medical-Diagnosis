@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable/back_b_gradient.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/back_c_gradient.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/back_d_gradient.xml" value="0.1735930735930736" />
+        <entry key="app/src/main/res/drawable/back_edit_text.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/back_radio_button_a.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/back_radio_button_b.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/c1_bottom_shape.xml" value="0.1735930735930736" />
@@ -20,6 +21,7 @@
         <entry key="app/src/main/res/drawable/checked.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/d1_bottom_shape.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/d1_top_shape.xml" value="0.1735930735930736" />
+        <entry key="app/src/main/res/drawable/ic_flag_russian.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.22" />
         <entry key="app/src/main/res/drawable/radio_button_main.xml" value="0.18333333333333332" />
@@ -31,6 +33,9 @@
         <entry key="app/src/main/res/drawable/unchecked.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30925925925925923" />
+        <entry key="app/src/main/res/layout/dialog_language.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/dialog_not_internet.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/dialog_opinion.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.10289210233592881" />
         <entry key="app/src/main/res/layout/fragment_natijalar.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.19270833333333334" />

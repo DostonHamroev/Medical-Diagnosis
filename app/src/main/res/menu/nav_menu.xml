@@ -4,50 +4,50 @@
     tools:showIn="navigation_view">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title="Asosiy" />
+        android:title="Главный" />
 
     <item
-        android:id="@+id/resultFragment"
+        android:id="@+id/nav_result"
         android:icon="@drawable/ic_results"
-        android:title="Natijalar" />
+        android:title="Результаты" />
 
     <item
         android:id="@+id/nav_settings"
         android:icon="@drawable/ic_settings_language"
-        android:title="Sozlash" />
+        android:title="Настройка" />
 
-    <item android:title="Ulashish">
+    <item android:title="Поделиться">
 
         <menu>
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
-                android:title="Ulashish" />
+                android:title="Поделиться" />
 
             <item
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_rate"
-                android:title="Baholash" />
+                android:title="Оценка" />
 
         </menu>
 
     </item>
 
-    <item android:title="Ilova haqida">
+    <item android:title="О приложении">
         <menu>
 
             <item
                 android:id="@+id/nav_opinion"
                 android:icon="@drawable/ic_opinion"
-                android:title="Taklif bildirish" />
+                android:title="Предложение" />
 
              <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_info"
-                android:title="Ilova haqida" />
+                android:title="Авторы" />
 
 
         </menu>
