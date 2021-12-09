@@ -2781,6 +2781,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/resultBtnBackground"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#DDD">
