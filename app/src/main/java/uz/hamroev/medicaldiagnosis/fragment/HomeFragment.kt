@@ -1,7 +1,10 @@
 package uz.hamroev.medicaldiagnosis.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +14,7 @@ import android.widget.Toast
 import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import uz.hamroev.medicaldiagnosis.R
+import uz.hamroev.medicaldiagnosis.activity.ResultActivity
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.FragmentHomeBinding
 
@@ -377,12 +381,14 @@ class HomeFragment : Fragment() {
         }
 
 
+
         binding.resultBtn.setOnClickListener {
             var result = a1Question1 + a1Question2 + a1Question3 +
                     a1Question4 + a1Question5 + a1Question6 +
                     a1Question7 + a1Question8 + a1Question9 + a1Question10
 
-            Toast.makeText(binding.root.context, "$result", Toast.LENGTH_SHORT).show()
+          //  Toast.makeText(binding.root.context, "A1=$result", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(binding.root.context, ResultActivity::class.java))
         }
 
 

@@ -1,11 +1,15 @@
 package uz.hamroev.medicaldiagnosis.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import uz.hamroev.medicaldiagnosis.R
+import uz.hamroev.medicaldiagnosis.adapter.AuthorAdapter
+import uz.hamroev.medicaldiagnosis.cache.Cache
+import uz.hamroev.medicaldiagnosis.databinding.FragmentAuthorBinding
+import uz.hamroev.medicaldiagnosis.model.Author
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,12 +34,49 @@ class AuthorFragment : Fragment() {
         }
     }
 
+    lateinit var binding: FragmentAuthorBinding
+    lateinit var authorAdapter: AuthorAdapter
+    lateinit var list: ArrayList<Author>
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_author, container, false)
+    ): View {
+        binding = FragmentAuthorBinding.inflate(layoutInflater, container, false)
+
+       checkLanguage()
+        authorAdapter = AuthorAdapter(binding.root.context, list)
+        binding.rvAuthor.adapter = authorAdapter
+
+        return binding.root
+    }
+
+
+
+    private fun checkLanguage() {
+        when (Cache.til) {
+            "ru" -> {
+                loadRuData()
+            }
+            "krill" -> {
+                loadKrillData()
+            }
+        }
+    }
+
+    private fun loadKrillData() {
+        binding.appAbout.text =  "SOG‘LIQNI SAQLAShNING BIRLAMChI BO‘G‘INI ShAROITIDA SURUNKALI YuRAK YeTIShMOVChILIGI KEChIShINI PROGNOZLASh VA BUYRAK DISFUNKSIYaSI ERTA TAShXISINING ALGORITMI "
+        list = ArrayList()
+        list.clear()
+        list.add(Author("Saida\nBeknazarova\nSafibullayevna","Professor\nt.f.d.\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Аudiovizual texnologiyalar kafedrasi professori", R.drawable.ic_saida))
+        list.add(Author("Doston\nHamroyev\nDavron o'g'li","Android Dasturchi\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Televizion Texnologiyalari fakulteti talabasi", R.drawable.ic_doston))
+    }
+
+    private fun loadRuData() {
+        binding.appAbout.text = "Алгоритм ранней диагностики дисфункции почек и прогнозирования течения хронической сердечной недостаточности  в условиях первичного звена здравоохранения"
+        list = ArrayList()
+        list.clear()
+        list.add(Author("Бекназарова \nСаида \n" + "Сафибуллаевна","Профессор\nд.т.н.\nПрофессор кафедры аудиовизуальные технологии Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_saida))
+        list.add(Author("Достон \nҲамроев \nДавронович","Андроид разработчик\nСтудент Факультет Телевизионных технологий Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_doston))
     }
 
     companion object {

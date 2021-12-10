@@ -53,5 +53,6 @@ dependencies {
     implementation 'com.github.devlight.shadowlayout:library:1.0.2'
     // check internet
     implementation 'com.github.raheemadamboev:check-internet-android:1.0.1'
-
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
