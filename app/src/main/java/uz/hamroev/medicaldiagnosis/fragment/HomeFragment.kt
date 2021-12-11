@@ -1,10 +1,7 @@
 package uz.hamroev.medicaldiagnosis.fragment
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +11,6 @@ import android.widget.Toast
 import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import uz.hamroev.medicaldiagnosis.R
-import uz.hamroev.medicaldiagnosis.activity.ResultActivity
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.FragmentHomeBinding
 
@@ -64,6 +60,58 @@ class HomeFragment : Fragment() {
     var a1Question8 = 0
     var a1Question9 = 0
     var a1Question10 = 0
+
+    var a2Question = 0
+
+    var b1CheckBox1 = 0
+    var b1CheckBox2 = 0
+    var b1CheckBox3 = 0
+    var b1CheckBox4 = 0
+    var b1CheckBox5 = 0
+    var b1CheckBox6 = 0
+
+    var b2CheckBox1 = 0
+    var b2CheckBox2 = 0
+    var b2CheckBox3 = 0
+    var b2CheckBox4 = 0
+
+    var b3CheckBox1 = 0
+    var b3CheckBox2 = 0
+    var b3CheckBox3 = 0
+    var b3CheckBox4 = 0
+    var b3CheckBox5 = 0
+    var b3CheckBox6 = 0
+    var b3CheckBox7 = 0
+    var b3CheckBox8 = 0
+
+    var c1CheckBox1 = 0
+    var c1CheckBox2 = 0
+    var c1CheckBox3 = 0
+    var c1CheckBox4 = 0
+    var c1CheckBox5 = 0
+    var c1CheckBox6 = 0
+
+    var c2CheckBox1 = 0
+    var c2CheckBox2 = 0
+    var c2CheckBox3 = 0
+    var c2CheckBox4 = 0
+    var c2CheckBox5 = 0
+
+    var d1Question1 = 0
+
+
+
+    var sumA1 = -1
+    var sumA2 = -1
+
+    var sumB1 = -1
+    var sumB2 = -1
+    var sumB3 = -1
+
+    var sumC1 = -1
+    var sumC2 = -1
+
+    var sumD1 = -1
 
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
@@ -380,15 +428,295 @@ class HomeFragment : Fragment() {
             }
         }
 
+        /* check A2 bo'lim */
+        binding.a2RadioGroup.setOnCheckedChangeListener { radioGruop, i ->
+            when (i) {
+                R.id.a2_radioButton1 -> {
+                    a2Question = 0
+                    sumA2 = a2Question
+                }
+                R.id.a2_radioButton2 -> {
+                    a2Question = 0
+                    a2Question = 1
+                    sumA2 = a2Question
+                }
+                R.id.a2_radioButton3 -> {
+                    a2Question = 0
+                    a2Question = 2
+                    sumA2 = a2Question
+                }
+                R.id.a2_radioButton4 -> {
+                    a2Question = 0
+                    a2Question = 3
+                    sumA2 = a2Question
+                }
+            }
+        }
+
+        /* check B1 bo'lim */
+        binding.b1CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox1 = 1
+            } else {
+                b1CheckBox1 = 0
+            }
+        }
+        binding.b1CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox2 = 1
+            } else {
+                b1CheckBox2 = 0
+            }
+        }
+        binding.b1CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox3 = 1
+            } else {
+                b1CheckBox3 = 0
+            }
+        }
+        binding.b1CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox4 = 1
+            } else {
+                b1CheckBox4 = 0
+            }
+        }
+        binding.b1CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox5 = 1
+            } else {
+                b1CheckBox5 = 0
+            }
+        }
+        binding.b1CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b1CheckBox6 = 1
+            } else {
+                b1CheckBox6 = 0
+            }
+        }
+
+        /* check B2 bo'lim */
+        binding.b2CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b2CheckBox1 = 1
+            } else {
+                b2CheckBox1 = 0
+            }
+        }
+        binding.b2CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b2CheckBox2 = 1
+            } else {
+                b2CheckBox2 = 0
+            }
+        }
+        binding.b2CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b2CheckBox3 = 1
+            } else {
+                b2CheckBox3 = 0
+            }
+        }
+        binding.b2CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b2CheckBox4 = 1
+            } else {
+                b2CheckBox4 = 0
+            }
+        }
+
+        /* check B3 bo'lim */
+        binding.b3CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox1 = 1
+            } else {
+                b3CheckBox1 = 0
+            }
+        }
+        binding.b3CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox2 = 1
+            } else {
+                b3CheckBox2 = 0
+            }
+        }
+        binding.b3CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox3 = 1
+            } else {
+                b3CheckBox3 = 0
+            }
+        }
+        binding.b3CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox4 = 1
+            } else {
+                b3CheckBox4 = 0
+            }
+        }
+        binding.b3CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox5 = 1
+            } else {
+                b3CheckBox5 = 0
+            }
+        }
+        binding.b3CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox6 = 1
+            } else {
+                b3CheckBox6 = 0
+            }
+        }
+        binding.b3CheckBox7.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox7 = 1
+            } else {
+                b3CheckBox7 = 0
+            }
+        }
+        binding.b3CheckBox8.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                b3CheckBox8 = 1
+            } else {
+                b3CheckBox8 = 0
+            }
+        }
+
+        /* check C1 bo'lim */
+        binding.c1CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox1 = 1
+            } else {
+                c1CheckBox1 = 0
+            }
+        }
+        binding.c1CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox2 = 1
+            } else {
+                c1CheckBox2 = 0
+            }
+        }
+        binding.c1CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox3 = 1
+            } else {
+                c1CheckBox3 = 0
+            }
+        }
+        binding.c1CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox4 = 1
+            } else {
+                c1CheckBox4 = 0
+            }
+        }
+        binding.c1CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox5 = 1
+            } else {
+                c1CheckBox5 = 0
+            }
+        }
+        binding.c1CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c1CheckBox6 = 1
+            } else {
+                c1CheckBox6 = 0
+            }
+        }
+
+        /* check C2 bo'lim */
+        binding.c2CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c2CheckBox1 = 1
+            } else {
+                c2CheckBox1 = 0
+            }
+        }
+        binding.c2CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c2CheckBox2 = 1
+            } else {
+                c2CheckBox2 = 0
+            }
+        }
+        binding.c2CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c2CheckBox3 = 1
+            } else {
+                c2CheckBox3 = 0
+            }
+        }
+        binding.c2CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c2CheckBox4 = 1
+            } else {
+                c2CheckBox4 = 0
+            }
+        }
+        binding.c2CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
+            if (isChecked){
+                c2CheckBox5 = 1
+            } else {
+                c2CheckBox5 = 0
+            }
+        }
+
+        /* check D1 bo'lim */
+        binding.D1questionRadioGroup.setOnCheckedChangeListener { radioGruop, i ->
+            when (i) {
+                R.id.D1question_RadioButton1 -> {
+                   d1Question1 = 0
+                    sumD1 = d1Question1
+                }
+                R.id.D1question_RadioButton2 -> {
+                    d1Question1 = 0
+                    d1Question1 = 1
+                    sumD1 = d1Question1
+                }
+                R.id.D1question_RadioButton3 -> {
+                    d1Question1 = 0
+                    d1Question1 = 2
+                    sumD1 = d1Question1
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
 
 
         binding.resultBtn.setOnClickListener {
-            var result = a1Question1 + a1Question2 + a1Question3 +
+            sumC1 = c1CheckBox1+c1CheckBox2+c1CheckBox3+c1CheckBox4+c1CheckBox5+c1CheckBox6
+            sumC2 = c2CheckBox1+c2CheckBox2+c2CheckBox3+c2CheckBox4+c2CheckBox5
+            sumB3 = b3CheckBox1+b3CheckBox2+b3CheckBox3+b3CheckBox4+b3CheckBox5+b3CheckBox6+b3CheckBox7+b3CheckBox8
+            sumB2 = b2CheckBox1+b2CheckBox2+b2CheckBox3+b2CheckBox4
+            sumB1 = b1CheckBox1+b1CheckBox2+b1CheckBox3+b1CheckBox4+b1CheckBox5+b1CheckBox6
+            sumA1 = a1Question1 + a1Question2 + a1Question3 +
                     a1Question4 + a1Question5 + a1Question6 +
                     a1Question7 + a1Question8 + a1Question9 + a1Question10
 
-          //  Toast.makeText(binding.root.context, "A1=$result", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(binding.root.context, ResultActivity::class.java))
+            Toast.makeText(binding.root.context, "A1=$sumA1" +
+                    "\nA2=${sumA2}" +
+                    "\nB1=${sumB1}" +
+                    "\nB2=${sumB2}" +
+                    "\nB3=${sumB3}" +
+                    "\nC1=${sumC1}" +
+                    "\nC2=${sumC2}" +
+                    "\nD1=${sumD1}", Toast.LENGTH_SHORT)
+                .show()
+            // startActivity(Intent(binding.root.context, ResultActivity::class.java))
         }
 
 
