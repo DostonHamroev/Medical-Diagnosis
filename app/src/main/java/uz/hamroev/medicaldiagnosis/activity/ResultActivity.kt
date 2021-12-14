@@ -18,8 +18,9 @@ class ResultActivity : AppCompatActivity() {
         setContentView(binding.root)
         Cache.init(this)
 
-       // getCurrentDateAndTime()
-        checkResult()
+        //getCurrentDateAndTime()
+        checkLanguage()
+
 
     }
 
@@ -34,7 +35,54 @@ class ResultActivity : AppCompatActivity() {
 
     }
 
-    private fun checkResult() {
+    private fun checkLanguage() {
+        when (Cache.til) {
+            "ru" -> {
+                loadRuData()
+            }
+            "krill" -> {
+                loadKrillData()
+            }
+        }
+    }
+
+    private fun loadKrillData() {
+        binding.diagnosVariant.text = "2 - Вариант"
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = "XCH I ФК I"
+        binding.diagnos2Tv.text = "Далее при этом"
+        binding.diagnosTitleUpTable.text =
+            "В1 (3 и БОЛЕЕ  пунктов)  +С0 (С1 и/или С2 менее 2х пунктов)  + Д1\n" +
+                    "На экран выходит следующее "
+        binding.diagnosResultTable1.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResultTable2.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResultTable3.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+
+    }
+
+    private fun loadRuData() {
+        binding.diagnosVariant.text = "2 - Вариант"
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = "XCH I ФК I"
+        binding.diagnos2Tv.text = "Далее при этом"
+        binding.diagnosTitleUpTable.text =
+            "В1 (3 и БОЛЕЕ  пунктов)  +С0 (С1 и/или С2 менее 2х пунктов)  + Д1\n" +
+                    "На экран выходит следующее "
+        binding.diagnosResultTable1.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResultTable2.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResultTable3.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
+                "НИЗКИЙ РИСК ССО\n" +
+                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
 
     }
 }

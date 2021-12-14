@@ -68,7 +68,9 @@ class AuthorFragment : Fragment() {
         list = ArrayList()
         list.clear()
         list.add(Author("Saida\nBeknazarova\nSafibullayevna","Professor\nt.f.d.\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Аudiovizual texnologiyalar kafedrasi professori", R.drawable.ic_saida))
-        list.add(Author("Doston\nHamroyev\nDavron o'g'li","Android Dasturchi\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Televizion Texnologiyalari fakulteti talabasi", R.drawable.ic_doston))
+        list.add(Author("Kamilova \nUmida \nKabirovna","m. f. d., professor, O'zbekiston Respublikasi Sog'liqni saqlash vazirligi Respublika ixtisoslashtirilgan terapiya va tibbiy reabilitatsiya ilmiy-amaliy tibbiyot markazi, ilmiy ishlar bo'yicha direktori",R.drawable.ic_umida_kamilova))
+        list.add(Author("Ataxodjaeva \nGulchehra \nAbdunabievna","t.f.d. O'zbekiston Respublikasi Sog'liqni saqlash vazirligi Respublika ixtisoslashtirilgan terapiya va tibbiy reabilitatsiya ilmiy-amaliy tibbiyot markazi, etakchi ilmiy hodim",R.drawable.ic_gulchehra))
+        list.add(Author("Doston\nHamroyev\nDavron o'g'li","Android Dasturchi\n\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Televizion Texnologiyalari fakulteti talabasi", R.drawable.ic_doston))
     }
 
     private fun loadRuData() {
@@ -76,7 +78,9 @@ class AuthorFragment : Fragment() {
         list = ArrayList()
         list.clear()
         list.add(Author("Бекназарова \nСаида \n" + "Сафибуллаевна","Профессор\nд.т.н.\nПрофессор кафедры аудиовизуальные технологии Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_saida))
-        list.add(Author("Достон \nҲамроев \nДавронович","Андроид разработчик\nСтудент Факультет Телевизионных технологий Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_doston))
+        list.add(Author("Камилова \nУмида \nКабировна","д.м.н., профессор, директор по научной работе Республиканского специализированного научно-практического медицинского центра терапии и медицинской реабилитации Министерства Здравоохранения Республики Узбекистан",R.drawable.ic_umida_kamilova))
+        list.add(Author("Атаходжаева \nГулчехра \nАбдунабиевна","д.м.н., доцент. Ведущий научный сотрудник Республиканского специализированного научно-практического медицинского центра терапии и медицинской реабилитации Министерства Здравоохранения Республики Узбекистан",R.drawable.ic_gulchehra))
+        list.add(Author("Достон \nҲамроев \nДавронович","Андроид разработчик\n\nСтудент Факультет Телевизионных технологий Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_doston))
     }
 
     companion object {

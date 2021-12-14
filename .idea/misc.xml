@@ -15,6 +15,10 @@
         <entry key="app/src/main/res/drawable/back_edit_text.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/back_radio_button_a.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/drawable/back_radio_button_b.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/drawable/back_result1.xml" value="0.16574074074074074" />
+        <entry key="app/src/main/res/drawable/back_result2.xml" value="0.16574074074074074" />
+        <entry key="app/src/main/res/drawable/back_result3.xml" value="0.16574074074074074" />
+        <entry key="app/src/main/res/drawable/back_result_card.xml" value="0.16574074074074074" />
         <entry key="app/src/main/res/drawable/c1_bottom_shape.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/c1_top_shape.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/checkbox_selector.xml" value="0.1735930735930736" />
@@ -33,7 +37,7 @@
         <entry key="app/src/main/res/drawable/unchecked.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30925925925925923" />
-        <entry key="app/src/main/res/layout/activity_result.xml" value="0.1287037037037037" />
+        <entry key="app/src/main/res/layout/activity_result.xml" value="0.22" />
         <entry key="app/src/main/res/layout/dialog_language.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_not_internet.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_opinion.xml" value="0.16" />

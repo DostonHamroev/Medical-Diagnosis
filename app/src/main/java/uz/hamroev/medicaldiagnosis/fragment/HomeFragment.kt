@@ -1,6 +1,7 @@
 package uz.hamroev.medicaldiagnosis.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import uz.hamroev.medicaldiagnosis.R
+import uz.hamroev.medicaldiagnosis.activity.ResultActivity
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.FragmentHomeBinding
 
@@ -61,6 +63,17 @@ class HomeFragment : Fragment() {
     var a1Question9 = 0
     var a1Question10 = 0
 
+    var a1QuestionSelect1 = 0
+    var a1QuestionSelect2 = 0
+    var a1QuestionSelect3 = 0
+    var a1QuestionSelect4 = 0
+    var a1QuestionSelect5 = 0
+    var a1QuestionSelect6 = 0
+    var a1QuestionSelect7 = 0
+    var a1QuestionSelect8 = 0
+    var a1QuestionSelect9 = 0
+    var a1QuestionSelect10 = 0
+
     var a2Question = 0
 
     var b1CheckBox1 = 0
@@ -99,7 +112,9 @@ class HomeFragment : Fragment() {
 
     var d1Question1 = 0
 
+    var isA1Select = 0
 
+    var sumA1Selected = 0
 
     var sumA1 = -1
     var sumA2 = -1
@@ -273,16 +288,28 @@ class HomeFragment : Fragment() {
             val btn = binding.root.findViewById<RadioButton>(sId) as RadioButton
             when (checkedId) {
                 R.id.A1question1_RadioButton1 -> {
+                    a1QuestionSelect1 = 0
+                    a1QuestionSelect1 = 10
                     binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question1 = 0
                 }
                 R.id.A1question1_RadioButton2 -> {
+                    a1QuestionSelect1 = 0
+                    a1QuestionSelect1 = 10
                     binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question1 = 0
                     a1Question1 = 1
                 }
                 R.id.A1question1_RadioButton3 -> {
+                    a1QuestionSelect1 = 0
+                    a1QuestionSelect1 = 10
                     binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question1 = 0
                     a1Question1 = 2
                 }
@@ -291,9 +318,17 @@ class HomeFragment : Fragment() {
         binding.A1question2RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question2_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question2 = 0
+                    a1QuestionSelect2 = 0
+                    a1QuestionSelect2 = 10
                 }
                 R.id.A1question2_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect2 = 0
+                    a1QuestionSelect2 = 10
                     a1Question2 = 0
                     a1Question2 = 1
 
@@ -303,11 +338,19 @@ class HomeFragment : Fragment() {
         binding.A1question3RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question3_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question3 = 0
+                    a1QuestionSelect3 = 0
+                    a1QuestionSelect3 = 10
                 }
                 R.id.A1question3_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
                     a1Question3 = 0
                     a1Question3 = 1
+                    a1QuestionSelect3 = 0
+                    a1QuestionSelect3 = 10
 
                 }
             }
@@ -315,17 +358,33 @@ class HomeFragment : Fragment() {
         binding.A1question4RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question4_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect4 = 0
+                    a1QuestionSelect4 = 10
                     a1Question4 = 0
                 }
                 R.id.A1question4_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect4 = 0
+                    a1QuestionSelect4 = 10
                     a1Question4 = 0
                     a1Question4 = 1
                 }
                 R.id.A1question4_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect4 = 0
+                    a1QuestionSelect4 = 10
                     a1Question4 = 0
                     a1Question4 = 2
                 }
                 R.id.A1question4_RadioButton4 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect4 = 0
+                    a1QuestionSelect4 = 10
                     a1Question4 = 0
                     a1Question4 = 3
                 }
@@ -334,13 +393,25 @@ class HomeFragment : Fragment() {
         binding.A1question5RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question5_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect5 = 0
+                    a1QuestionSelect5 = 10
                     a1Question5 = 0
                 }
                 R.id.A1question5_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect5 = 0
+                    a1QuestionSelect5 = 10
                     a1Question5 = 0
                     a1Question5 = 1
                 }
                 R.id.A1question5_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect5 = 0
+                    a1QuestionSelect5 = 10
                     a1Question5 = 0
                     a1Question5 = 2
                 }
@@ -350,17 +421,33 @@ class HomeFragment : Fragment() {
         binding.A1question6RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question6_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect6 = 0
+                    a1QuestionSelect6 = 10
                     a1Question6 = 0
                 }
                 R.id.A1question6_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect6 = 0
+                    a1QuestionSelect6 = 10
                     a1Question6 = 0
                     a1Question6 = 1
                 }
                 R.id.A1question6_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect6 = 0
+                    a1QuestionSelect6 = 10
                     a1Question6 = 0
                     a1Question6 = 2
                 }
                 R.id.A1question6_RadioButton4 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect6 = 0
+                    a1QuestionSelect6 = 10
                     a1Question6 = 0
                     a1Question6 = 3
                 }
@@ -370,9 +457,17 @@ class HomeFragment : Fragment() {
         binding.A1question7RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question7_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect7 = 0
+                    a1QuestionSelect7 = 10
                     a1Question7 = 0
                 }
                 R.id.A1question7_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect7 = 0
+                    a1QuestionSelect7 = 10
                     a1Question7 = 0
                     a1Question7 = 1
                 }
@@ -381,13 +476,25 @@ class HomeFragment : Fragment() {
         binding.A1question8RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question8_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect8 = 0
+                    a1QuestionSelect8 = 10
                     a1Question8 = 0
                 }
                 R.id.A1question8_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect8 = 0
+                    a1QuestionSelect8 = 10
                     a1Question8 = 0
                     a1Question8 = 1
                 }
                 R.id.A1question8_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect8 = 0
+                    a1QuestionSelect8 = 10
                     a1Question8 = 0
                     a1Question8 = 2
                 }
@@ -396,17 +503,33 @@ class HomeFragment : Fragment() {
         binding.A1question9RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question9_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect9 = 0
+                    a1QuestionSelect9 = 10
                     a1Question9 = 0
                 }
                 R.id.A1question9_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect9 = 0
+                    a1QuestionSelect9 = 10
                     a1Question9 = 0
                     a1Question9 = 1
                 }
                 R.id.A1question9_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect9 = 0
+                    a1QuestionSelect9 = 10
                     a1Question9 = 0
                     a1Question9 = 2
                 }
                 R.id.A1question9_RadioButton4 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect9 = 0
+                    a1QuestionSelect9 = 10
                     a1Question9 = 0
                     a1Question9 = 3
                 }
@@ -415,13 +538,25 @@ class HomeFragment : Fragment() {
         binding.A1question10RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question10_RadioButton1 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect10 = 0
+                    a1QuestionSelect10 = 10
                     a1Question10 = 0
                 }
                 R.id.A1question10_RadioButton2 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect10 = 0
+                    a1QuestionSelect10 = 10
                     a1Question10 = 0
                     a1Question10 = 1
                 }
                 R.id.A1question10_RadioButton3 -> {
+                    binding.bottomBodyA2.visibility = View.GONE
+                    binding.topTitleMainA2.visibility = View.GONE
+                    a1QuestionSelect10 = 0
+                    a1QuestionSelect10 = 10
                     a1Question10 = 0
                     a1Question10 = 2
                 }
@@ -432,20 +567,36 @@ class HomeFragment : Fragment() {
         binding.a2RadioGroup.setOnCheckedChangeListener { radioGruop, i ->
             when (i) {
                 R.id.a2_radioButton1 -> {
+                    binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBody.visibility = View.GONE
+                    binding.topTitleMain.visibility = View.GONE
+                    sumA1Selected = 100
                     a2Question = 0
                     sumA2 = a2Question
                 }
                 R.id.a2_radioButton2 -> {
+                    binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBody.visibility = View.GONE
+                    binding.topTitleMain.visibility = View.GONE
+                    sumA1Selected = 100
                     a2Question = 0
                     a2Question = 1
                     sumA2 = a2Question
                 }
                 R.id.a2_radioButton3 -> {
+                    binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBody.visibility = View.GONE
+                    binding.topTitleMain.visibility = View.GONE
+                    sumA1Selected = 100
                     a2Question = 0
                     a2Question = 2
                     sumA2 = a2Question
                 }
                 R.id.a2_radioButton4 -> {
+                    binding.resultBtnBackground.setBackgroundResource(R.color.azure)
+                    binding.bottomBody.visibility = View.GONE
+                    binding.topTitleMain.visibility = View.GONE
+                    sumA1Selected = 100
                     a2Question = 0
                     a2Question = 3
                     sumA2 = a2Question
@@ -455,42 +606,42 @@ class HomeFragment : Fragment() {
 
         /* check B1 bo'lim */
         binding.b1CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox1 = 1
             } else {
                 b1CheckBox1 = 0
             }
         }
         binding.b1CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox2 = 1
             } else {
                 b1CheckBox2 = 0
             }
         }
         binding.b1CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox3 = 1
             } else {
                 b1CheckBox3 = 0
             }
         }
         binding.b1CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox4 = 1
             } else {
                 b1CheckBox4 = 0
             }
         }
         binding.b1CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox5 = 1
             } else {
                 b1CheckBox5 = 0
             }
         }
         binding.b1CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b1CheckBox6 = 1
             } else {
                 b1CheckBox6 = 0
@@ -499,28 +650,28 @@ class HomeFragment : Fragment() {
 
         /* check B2 bo'lim */
         binding.b2CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b2CheckBox1 = 1
             } else {
                 b2CheckBox1 = 0
             }
         }
         binding.b2CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b2CheckBox2 = 1
             } else {
                 b2CheckBox2 = 0
             }
         }
         binding.b2CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b2CheckBox3 = 1
             } else {
                 b2CheckBox3 = 0
             }
         }
         binding.b2CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b2CheckBox4 = 1
             } else {
                 b2CheckBox4 = 0
@@ -529,56 +680,56 @@ class HomeFragment : Fragment() {
 
         /* check B3 bo'lim */
         binding.b3CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox1 = 1
             } else {
                 b3CheckBox1 = 0
             }
         }
         binding.b3CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox2 = 1
             } else {
                 b3CheckBox2 = 0
             }
         }
         binding.b3CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox3 = 1
             } else {
                 b3CheckBox3 = 0
             }
         }
         binding.b3CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox4 = 1
             } else {
                 b3CheckBox4 = 0
             }
         }
         binding.b3CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox5 = 1
             } else {
                 b3CheckBox5 = 0
             }
         }
         binding.b3CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox6 = 1
             } else {
                 b3CheckBox6 = 0
             }
         }
         binding.b3CheckBox7.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox7 = 1
             } else {
                 b3CheckBox7 = 0
             }
         }
         binding.b3CheckBox8.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 b3CheckBox8 = 1
             } else {
                 b3CheckBox8 = 0
@@ -587,42 +738,42 @@ class HomeFragment : Fragment() {
 
         /* check C1 bo'lim */
         binding.c1CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox1 = 1
             } else {
                 c1CheckBox1 = 0
             }
         }
         binding.c1CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox2 = 1
             } else {
                 c1CheckBox2 = 0
             }
         }
         binding.c1CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox3 = 1
             } else {
                 c1CheckBox3 = 0
             }
         }
         binding.c1CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox4 = 1
             } else {
                 c1CheckBox4 = 0
             }
         }
         binding.c1CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox5 = 1
             } else {
                 c1CheckBox5 = 0
             }
         }
         binding.c1CheckBox6.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c1CheckBox6 = 1
             } else {
                 c1CheckBox6 = 0
@@ -631,35 +782,35 @@ class HomeFragment : Fragment() {
 
         /* check C2 bo'lim */
         binding.c2CheckBox1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c2CheckBox1 = 1
             } else {
                 c2CheckBox1 = 0
             }
         }
         binding.c2CheckBox2.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c2CheckBox2 = 1
             } else {
                 c2CheckBox2 = 0
             }
         }
         binding.c2CheckBox3.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c2CheckBox3 = 1
             } else {
                 c2CheckBox3 = 0
             }
         }
         binding.c2CheckBox4.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c2CheckBox4 = 1
             } else {
                 c2CheckBox4 = 0
             }
         }
         binding.c2CheckBox5.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 c2CheckBox5 = 1
             } else {
                 c2CheckBox5 = 0
@@ -670,7 +821,7 @@ class HomeFragment : Fragment() {
         binding.D1questionRadioGroup.setOnCheckedChangeListener { radioGruop, i ->
             when (i) {
                 R.id.D1question_RadioButton1 -> {
-                   d1Question1 = 0
+                    d1Question1 = 0
                     sumD1 = d1Question1
                 }
                 R.id.D1question_RadioButton2 -> {
@@ -698,28 +849,69 @@ class HomeFragment : Fragment() {
 
 
         binding.resultBtn.setOnClickListener {
-            sumC1 = c1CheckBox1+c1CheckBox2+c1CheckBox3+c1CheckBox4+c1CheckBox5+c1CheckBox6
-            sumC2 = c2CheckBox1+c2CheckBox2+c2CheckBox3+c2CheckBox4+c2CheckBox5
-            sumB3 = b3CheckBox1+b3CheckBox2+b3CheckBox3+b3CheckBox4+b3CheckBox5+b3CheckBox6+b3CheckBox7+b3CheckBox8
-            sumB2 = b2CheckBox1+b2CheckBox2+b2CheckBox3+b2CheckBox4
-            sumB1 = b1CheckBox1+b1CheckBox2+b1CheckBox3+b1CheckBox4+b1CheckBox5+b1CheckBox6
-            sumA1 = a1Question1 + a1Question2 + a1Question3 +
-                    a1Question4 + a1Question5 + a1Question6 +
-                    a1Question7 + a1Question8 + a1Question9 + a1Question10
+            var sumA1Selected2 =
+                a1QuestionSelect1 + a1QuestionSelect2 + a1QuestionSelect3 + a1QuestionSelect4 + a1QuestionSelect5 + a1QuestionSelect6 + a1QuestionSelect7 + a1QuestionSelect8 + a1QuestionSelect9 + a1QuestionSelect10
+            sumC1 =
+                c1CheckBox1 + c1CheckBox2 + c1CheckBox3 + c1CheckBox4 + c1CheckBox5 + c1CheckBox6
+            sumC2 = c2CheckBox1 + c2CheckBox2 + c2CheckBox3 + c2CheckBox4 + c2CheckBox5
+            sumB3 =
+                b3CheckBox1 + b3CheckBox2 + b3CheckBox3 + b3CheckBox4 + b3CheckBox5 + b3CheckBox6 + b3CheckBox7 + b3CheckBox8
+            sumB2 = b2CheckBox1 + b2CheckBox2 + b2CheckBox3 + b2CheckBox4
+            sumB1 =
+                b1CheckBox1 + b1CheckBox2 + b1CheckBox3 + b1CheckBox4 + b1CheckBox5 + b1CheckBox6
+            sumA1 =
+                a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
 
-            Toast.makeText(binding.root.context, "A1=$sumA1" +
-                    "\nA2=${sumA2}" +
-                    "\nB1=${sumB1}" +
-                    "\nB2=${sumB2}" +
-                    "\nB3=${sumB3}" +
-                    "\nC1=${sumC1}" +
-                    "\nC2=${sumC2}" +
-                    "\nD1=${sumD1}", Toast.LENGTH_SHORT)
-                .show()
-            // startActivity(Intent(binding.root.context, ResultActivity::class.java))
+//            Toast.makeText(
+//                binding.root.context,
+//                "Sum A1 Selected A1 = ${sumA1Selected}" + "\nA1=$sumA1" + "\nA2=${sumA2}" + "\nB1=${sumB1}" + "\nB2=${sumB2}" + "\nB3=${sumB3}" + "\nC1=${sumC1}" + "\nC2=${sumC2}" + "\nD1=${sumD1}",
+//                Toast.LENGTH_SHORT
+//            ).show()
+
+            if (sumA1Selected == 100 || sumA1Selected2 == 100) {
+
+                if (sumB1 >= 3) {
+                    if (sumB2 >= 2) {
+                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                    } else if (sumB2 < 2) {
+                    }
+
+                    if (sumB3 >= 3) {
+                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                    } else if (sumB3 < 3) {
+                    }
+
+                    if (sumC1 >= 3) {
+                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                    } else if (sumC1 < 3) {
+                    }
+
+                    if (sumC2 >= 2) {
+                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                    } else if (sumC2 < 2) {
+                    }
+
+                    startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                } else if (sumB1 < 3) {
+                    Toast.makeText(
+                        binding.root.context,
+                        "B1 bo'limni kamida 3 ta belgilang",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+
+            } else {
+                Toast.makeText(
+                    binding.root.context,
+                    "A1 yoki A2 bo'limni belgilang",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+            }
+
+
         }
-
-
 
 
 
