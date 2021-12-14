@@ -871,25 +871,40 @@ class HomeFragment : Fragment() {
             if (sumA1Selected == 100 || sumA1Selected2 == 100) {
 
                 if (sumB1 >= 3) {
+
                     if (sumB2 >= 2) {
-                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                        //startActivity(Intent(binding.root.context, ResultActivity::class.java))
                     } else if (sumB2 < 2) {
                     }
 
                     if (sumB3 >= 3) {
-                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
                     } else if (sumB3 < 3) {
                     }
 
                     if (sumC1 >= 3) {
-                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
                     } else if (sumC1 < 3) {
                     }
 
                     if (sumC2 >= 2) {
-                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
                     } else if (sumC2 < 2) {
                     }
+
+                    Cache.a1 = sumA1
+                    Cache.a2 = sumA2
+
+                    Cache.b1 = sumB1
+                    Cache.b2 = sumB2
+                    Cache.b3 = sumB3
+
+                    Cache.c1 = sumC1
+                    Cache.c2 = sumC2
+
+                    Cache.d1 = sumD1
+
+
 
                     startActivity(Intent(binding.root.context, ResultActivity::class.java))
                 } else if (sumB1 < 3) {
@@ -901,13 +916,13 @@ class HomeFragment : Fragment() {
                 }
 
 
+
             } else {
                 Toast.makeText(
                     binding.root.context,
                     "A1 yoki A2 bo'limni belgilang",
                     Toast.LENGTH_SHORT
-                )
-                    .show()
+                ).show()
             }
 
 
@@ -1234,6 +1249,118 @@ class HomeFragment : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        clearA1Block()
+        clearA2Block()
+        clearB1Block()
+        clearB2Block()
+        clearB3Block()
+        clearC1Block()
+        clearC2Block()
+        clearD1Block()
+    }
+
+    private fun clearA1Block() {
+       binding.A1question1RadioButton1.isChecked = false
+       binding.A1question1RadioButton2.isChecked = false
+       binding.A1question1RadioButton3.isChecked = false
+
+        binding.A1question2RadioButton1.isChecked = false
+        binding.A1question2RadioButton2.isChecked = false
+
+        binding.A1question3RadioButton1.isChecked = false
+        binding.A1question3RadioButton2.isChecked = false
+
+        binding.A1question4RadioButton1.isChecked = false
+        binding.A1question4RadioButton2.isChecked = false
+        binding.A1question4RadioButton3.isChecked = false
+        binding.A1question4RadioButton4.isChecked = false
+
+        binding.A1question5RadioButton1.isChecked = false
+        binding.A1question5RadioButton2.isChecked = false
+        binding.A1question5RadioButton3.isChecked = false
+
+        binding.A1question6RadioButton1.isChecked = false
+        binding.A1question6RadioButton2.isChecked = false
+        binding.A1question6RadioButton3.isChecked = false
+        binding.A1question6RadioButton4.isChecked = false
+
+        binding.A1question7RadioButton1.isChecked = false
+        binding.A1question7RadioButton2.isChecked = false
+
+        binding.A1question8RadioButton1.isChecked = false
+        binding.A1question8RadioButton2.isChecked = false
+        binding.A1question8RadioButton3.isChecked = false
+
+        binding.A1question9RadioButton1.isChecked = false
+        binding.A1question9RadioButton2.isChecked = false
+        binding.A1question9RadioButton3.isChecked = false
+        binding.A1question9RadioButton4.isChecked = false
+
+        binding.A1question10RadioButton1.isChecked = false
+        binding.A1question10RadioButton2.isChecked = false
+        binding.A1question10RadioButton3.isChecked = false
+    }
+
+    private fun clearA2Block() {
+        binding.a2RadioButton1.isChecked = false
+        binding.a2RadioButton2.isChecked = false
+        binding.a2RadioButton3.isChecked = false
+        binding.a2RadioButton4.isChecked = false
+    }
+
+    private fun clearB1Block() {
+        binding.b1CheckBox1.isChecked = false
+        binding.b1CheckBox2.isChecked = false
+        binding.b1CheckBox3.isChecked = false
+        binding.b1CheckBox4.isChecked = false
+        binding.b1CheckBox5.isChecked = false
+        binding.b1CheckBox6.isChecked = false
+    }
+
+    private fun clearB2Block() {
+        binding.b2CheckBox1.isChecked = false
+        binding.b2CheckBox2.isChecked = false
+        binding.b2CheckBox3.isChecked = false
+        binding.b2CheckBox4.isChecked = false
+
+    }
+
+    private fun clearB3Block() {
+        binding.b3CheckBox1.isChecked = false
+        binding.b3CheckBox2.isChecked = false
+        binding.b3CheckBox3.isChecked = false
+        binding.b3CheckBox4.isChecked = false
+        binding.b3CheckBox5.isChecked = false
+        binding.b3CheckBox6.isChecked = false
+        binding.b3CheckBox7.isChecked = false
+        binding.b3CheckBox8.isChecked = false
+    }
+
+    private fun clearC1Block() {
+        binding.c1CheckBox1.isChecked = false
+        binding.c1CheckBox2.isChecked = false
+        binding.c1CheckBox3.isChecked = false
+        binding.c1CheckBox4.isChecked = false
+        binding.c1CheckBox5.isChecked = false
+        binding.c1CheckBox6.isChecked = false
+
+    }
+
+    private fun clearC2Block() {
+        binding.c2CheckBox1.isChecked = false
+        binding.c2CheckBox2.isChecked = false
+        binding.c2CheckBox3.isChecked = false
+        binding.c2CheckBox4.isChecked = false
+        binding.c2CheckBox5.isChecked = false
+    }
+
+    private fun clearD1Block() {
+        binding.D1questionRadioButton1.isChecked = false
+        binding.D1questionRadioButton2.isChecked = false
+        binding.D1questionRadioButton3.isChecked = false
+    }
 
     companion object {
         /**
