@@ -99,46 +99,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="6dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/back_result_card"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/diagnos2_tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="dalee pri etom:"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/diagnos_title_up_table"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/sourcesansblack"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="В1 (3 и БОЛЕЕ  пунктов)  +С0 (С1 и/или С2 менее 2х пунктов)  + Д1
-На экран выходит следующее "
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

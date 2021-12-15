@@ -1,11 +1,15 @@
 package uz.hamroev.medicaldiagnosis.fragment
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import uz.hamroev.medicaldiagnosis.R
+import uz.hamroev.medicaldiagnosis.databinding.FragmentNatijalarBinding
+import uz.hamroev.medicaldiagnosis.room.database.ResultDatabase
+import uz.hamroev.medicaldiagnosis.room.entity.ResultEntity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,12 +34,24 @@ class NatijalarFragment : Fragment() {
         }
     }
 
+    lateinit var binding: FragmentNatijalarBinding
+    lateinit var resultDatabase: ResultDatabase
+    lateinit var list: ArrayList<ResultEntity>
+    private  val TAG = "NatijalarFragment"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_natijalar, container, false)
+    ): View {
+        binding = FragmentNatijalarBinding.inflate(layoutInflater, container, false)
+
+        resultDatabase = ResultDatabase.getInstance(binding.root.context)
+        list = resultDatabase.resultDao().getAllResults() as ArrayList
+        for (entity in list) {
+            Log.d(TAG, "onCreateView: ${entity.date}")
+        }
+
+
+        return binding.root
     }
 
     companion object {

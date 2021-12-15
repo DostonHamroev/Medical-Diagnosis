@@ -5,12 +5,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.ActivityResultBinding
+import uz.hamroev.medicaldiagnosis.room.database.ResultDatabase
+import uz.hamroev.medicaldiagnosis.room.entity.ResultEntity
 import java.text.SimpleDateFormat
 import java.util.*
 
 class ResultActivity : AppCompatActivity() {
+
+    lateinit var resultDatabase: ResultDatabase
     lateinit var binding: ActivityResultBinding
     lateinit var dateAndTime: Date
+
     var a1 = Cache.a1
     var a2 = Cache.a2
 
@@ -28,6 +33,7 @@ class ResultActivity : AppCompatActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Cache.init(this)
+        resultDatabase = ResultDatabase.getInstance(this)
 
         //getCurrentDateAndTime()
         checkLanguage()
@@ -48,6 +54,10 @@ class ResultActivity : AppCompatActivity() {
         if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2 == 0 && b3 == 0 && c1 == 0 && c2 == 0 && d1 == -1) {
             Cache.variant = "2"
         }
+        /* 2-variant */
+        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2 == 0 && b3 == 0 && c1!! < 3 && c2!! < 2 && d1 == -1) {
+            Cache.variant = "2"
+        }
 
         /* 3-variant */
         if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2 == 0 && b3!! >= 3 && c1 == 0 && c2 == 0 && d1 == -1) {
@@ -60,35 +70,36 @@ class ResultActivity : AppCompatActivity() {
         }
 
         /* 5-variant */
-        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3==0 && c1 == 0 && c2 == 0 && d1 == -1) {
+        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3 == 0 && c1 == 0 && c2 == 0 && d1 == -1) {
             Cache.variant = "5"
         }
 
         /* 6-variant */
-        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! >=3 && c1!! >=3 && c2!! >=2 && d1 == -1) {
+        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! >= 3 && c1!! >= 3 && c2!! >= 2 && d1 == -1) {
             Cache.variant = "6"
         }
 
         /* 7-variant */
-        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! ==0 && c1!! >=3 && c2!! >=2 && d1 == -1) {
+        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! == 0 && c1!! >= 3 && c2!! >= 2 && d1 == -1) {
             Cache.variant = "7"
         }
 
         /* 8-variant */
-        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! >=3 && c1!! >=3 && c2!! >=2 && d1!! > -1) {
+        if (b1!! >= 3 && (a1!! > 0 || a2!! != 0) && b2!! >= 2 && b3!! >= 3 && c1!! >= 3 && c2!! >= 2 && d1!! > -1) {
             Cache.variant = "8"
         }
 
     }
 
-    private fun getCurrentDateAndTime() {
+    private fun getCurrentDateAndTime(): String {
         dateAndTime = Calendar.getInstance().time
         val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
         val timeFormat = SimpleDateFormat("hh:mm:ss", Locale.getDefault())
         val date = dateFormat.format(dateAndTime)
         val time = timeFormat.format(dateAndTime)
-        val vaqt = "$date - $time"
-        Toast.makeText(this, "$vaqt", Toast.LENGTH_SHORT).show()
+        val vaqt: String = "$date - $time"
+        //Toast.makeText(this, "$vaqt", Toast.LENGTH_SHORT).show()
+        return vaqt
 
     }
 
@@ -163,57 +174,168 @@ class ResultActivity : AppCompatActivity() {
 
 
 
+
     /* variants for language RUSSIAN */
 
     private fun loadRUVariant1() {
-        binding.diagnosVariant.text = "1 - Вариант akaxon"
+        binding.diagnosVariant.text = ""
         binding.diagnosTv.text = "Диагноз"
-        binding.diagnosResult.text = "XCH I ФК I"
-        binding.diagnos2Tv.text = "Далее при этом"
-        binding.diagnosTitleUpTable.text =
-            "В1 (3 и БОЛЕЕ  пунктов)  +С0 (С1 и/или С2 менее 2х пунктов)  + Д1\n" +
-                    "На экран выходит следующее "
-        binding.diagnosResultTable1.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
-                "НИЗКИЙ РИСК ССО\n" +
-                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
-        binding.diagnosResultTable2.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
-                "НИЗКИЙ РИСК ССО\n" +
-                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
-        binding.diagnosResultTable3.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" +
-                "НИЗКИЙ РИСК ССО\n" +
-                "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
     }
 
-    private fun loadRUVariant2() {}
+    private fun loadRUVariant2() {
 
-    private fun loadRUVariant3() {}
+        binding.diagnosVariant.text = "2 вариант"
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = " КОНСУЛЬТАЦИЯ КАРДИОЛОГА\n" + "ЭКГ+ ЭХОКГ\n"
+        binding.diagnosResultTable2.text = "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" + "НИЗКИЙ РИСК ССО\n" + "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
+        binding.diagnosResultTable3.text = "Контроль употребляемой жидкости, употребляемой пищевой соли,  контроль диуреза, \n" + "Контроль своевременного  приема ЛС"
 
-    private fun loadRUVariant4() {}
+        var result = ResultEntity()
+        result.date = getCurrentDateAndTime()
+        result.variant = "2-var"
+        result.diagnos = "XFC"
+        result.diagnos1 = "1"
+        result.diagnos2 = "2"
+        result.diagnos3 = "3"
+        resultDatabase.resultDao().addResult(result)
 
-    private fun loadRUVariant5() {}
 
-    private fun loadRUVariant6() {}
+    }
 
-    private fun loadRUVariant7() {}
+    private fun loadRUVariant3() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadRUVariant8() {}
+    private fun loadRUVariant4() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
+    private fun loadRUVariant5() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
+    private fun loadRUVariant6() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
+    private fun loadRUVariant7() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
+    private fun loadRUVariant8() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
+
 
     /* variants for language KRILL*/
 
-    private fun loadKRILLVariant1() {}
+    private fun loadKRILLVariant1() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant2() {}
+    private fun loadKRILLVariant2() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant3() {}
+    private fun loadKRILLVariant3() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant4() {}
+    private fun loadKRILLVariant4() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant5() {}
+    private fun loadKRILLVariant5() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant6() {}
+    private fun loadKRILLVariant6() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant7() {}
+    private fun loadKRILLVariant7() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
 
-    private fun loadKRILLVariant8() {}
+    private fun loadKRILLVariant8() {
+        binding.diagnosVariant.text = ""
+        binding.diagnosTv.text = "Диагноз"
+        binding.diagnosResult.text = ""
+        binding.diagnosResultTable1.text = ""
+        binding.diagnosResultTable2.text = ""
+        binding.diagnosResultTable3.text = ""
+    }
+
 
 }

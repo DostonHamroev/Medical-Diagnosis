@@ -10,5 +10,6 @@
     <color name="azure">#0580FB</color>
     <color name="darkBlue">#2d3E4F</color>
     <color name="top_and_bottom">#DFF1FA</color>
+    <color name="grey">#F7F7F7</color>
 
 </resources>

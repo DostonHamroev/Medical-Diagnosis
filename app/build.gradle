@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -55,4 +56,11 @@ dependencies {
     implementation 'com.github.raheemadamboev:check-internet-android:1.0.1'
     //circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Room
+    def roomVersion = "2.3.0"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+
 }
