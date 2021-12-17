@@ -39,7 +39,7 @@ class ResultActivity : AppCompatActivity() {
         findVariant()
         checkLanguage()
         //   Toast.makeText(this, "\nA1=$a1\nA2=$a2\nB1=$b1\nB2=$b2\nB3=$b3\nC1=$c1\nC2=$c2\nD1=$d1", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "${Cache.variant}", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "${Cache.variant}", Toast.LENGTH_SHORT).show()
 
 
     }
@@ -188,8 +188,8 @@ class ResultActivity : AppCompatActivity() {
 
     private fun loadRUVariant2() {
 
-        Toast.makeText(binding.root.context, "$a1", Toast.LENGTH_SHORT).show()
-        Toast.makeText(binding.root.context, "$a2", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(binding.root.context, "$a1", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(binding.root.context, "$a2", Toast.LENGTH_SHORT).show()
 
         if (a1!! >= 1 || a1!! <= 3) {
             binding.diagnosResult.text = "XCH I FK I"
