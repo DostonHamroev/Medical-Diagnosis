@@ -38,15 +38,16 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30925925925925923" />
         <entry key="app/src/main/res/layout/activity_result.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/dialog_info_result.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_language.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_not_internet.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_opinion.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_author.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.10289210233592881" />
-        <entry key="app/src/main/res/layout/fragment_natijalar.xml" value="0.17577197149643706" />
+        <entry key="app/src/main/res/layout/fragment_natijalar.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_author.xml" value="0.1361111111111111" />
-        <entry key="app/src/main/res/layout/item_results.xml" value="0.1388888888888889" />
+        <entry key="app/src/main/res/layout/item_results.xml" value="0.13518518518518519" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/menu/nav_menu.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/nav_menu_language.xml" value="0.19270833333333334" />
