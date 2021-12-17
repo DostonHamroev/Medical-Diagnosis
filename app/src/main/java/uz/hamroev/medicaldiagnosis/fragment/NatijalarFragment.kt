@@ -41,7 +41,7 @@ class NatijalarFragment : Fragment() {
 
     lateinit var binding: FragmentNatijalarBinding
     lateinit var resultDatabase: ResultDatabase
-    lateinit var list: ArrayList<ResultEntity>
+    lateinit var list: List<ResultEntity>
     lateinit var resultsAdapter: ResultsAdapter
     var message: String = ""
     var shareMessage: String =
@@ -55,7 +55,7 @@ class NatijalarFragment : Fragment() {
 
         shareMessage = "https://play.google.com/store/apps/details?id=" + activity?.packageName
         resultDatabase = ResultDatabase.getInstance(binding.root.context)
-        list = resultDatabase.resultDao().getAllResults().reversed() as ArrayList
+        list = resultDatabase.resultDao().getAllResults().reversed()
 
 //        for (entity in list) {
 //            Log.d(TAG, "onCreateView: ${entity.date}")
@@ -68,6 +68,7 @@ class NatijalarFragment : Fragment() {
                     message = "$name\n\n" +
                             "* * * * * * *\n" +
                             "Диагностический номер: ${list[position].id}\n" +
+                            "Пользователь: ${list[position].fio}\n" +
                             "Вариант: ${list[position].variant}\n" +
                             "Диагноз: ${list[position].diagnos}\n" +
                             "Время: ${list[position].date}" +

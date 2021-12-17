@@ -116,6 +116,19 @@ class HomeFragment : Fragment() {
 
     var sumA1Selected = 0
 
+    var aNol1 = 10
+    var aNol2 = 10
+    var aNol3 = 10
+    var aNol4 = 10
+    var aNol5 = 10
+    var aNol6 = 10
+    var aNol7 = 10
+    var aNol8 = 10
+    var aNol9 = 10
+    var aNol10 = 10
+
+    var sumAnol = 10
+
     var sumA1 = -1
     var sumA2 = -1
 
@@ -127,6 +140,11 @@ class HomeFragment : Fragment() {
     var sumC2 = -1
 
     var sumD1 = -1
+
+    var toastFio = "Ф.И.О написать"
+    var toastA = ""
+    var toastB = ""
+    var toastC = ""
 
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
@@ -288,6 +306,7 @@ class HomeFragment : Fragment() {
             val btn = binding.root.findViewById<RadioButton>(sId) as RadioButton
             when (checkedId) {
                 R.id.A1question1_RadioButton1 -> {
+                    aNol1 = 0
                     a1QuestionSelect1 = 0
                     a1QuestionSelect1 = 10
                     binding.resultBtnBackground.setBackgroundResource(R.color.azure)
@@ -318,6 +337,7 @@ class HomeFragment : Fragment() {
         binding.A1question2RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question2_RadioButton1 -> {
+                    aNol2 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1Question2 = 0
@@ -338,6 +358,7 @@ class HomeFragment : Fragment() {
         binding.A1question3RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question3_RadioButton1 -> {
+                    aNol3 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1Question3 = 0
@@ -358,6 +379,7 @@ class HomeFragment : Fragment() {
         binding.A1question4RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question4_RadioButton1 -> {
+                    aNol4 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect4 = 0
@@ -393,6 +415,7 @@ class HomeFragment : Fragment() {
         binding.A1question5RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question5_RadioButton1 -> {
+                    aNol5 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect5 = 0
@@ -421,6 +444,7 @@ class HomeFragment : Fragment() {
         binding.A1question6RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question6_RadioButton1 -> {
+                    aNol6 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect6 = 0
@@ -457,6 +481,7 @@ class HomeFragment : Fragment() {
         binding.A1question7RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question7_RadioButton1 -> {
+                    aNol7 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect7 = 0
@@ -476,6 +501,7 @@ class HomeFragment : Fragment() {
         binding.A1question8RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question8_RadioButton1 -> {
+                    aNol8 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect8 = 0
@@ -503,6 +529,7 @@ class HomeFragment : Fragment() {
         binding.A1question9RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question9_RadioButton1 -> {
+                    aNol9 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect9 = 0
@@ -538,6 +565,7 @@ class HomeFragment : Fragment() {
         binding.A1question10RadioGroup.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.A1question10_RadioButton1 -> {
+                    aNol10 = 0
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
                     a1QuestionSelect10 = 0
@@ -859,67 +887,66 @@ class HomeFragment : Fragment() {
             sumB2 = b2CheckBox1 + b2CheckBox2 + b2CheckBox3 + b2CheckBox4
             sumB1 =
                 b1CheckBox1 + b1CheckBox2 + b1CheckBox3 + b1CheckBox4 + b1CheckBox5 + b1CheckBox6
-            sumA1 = a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
+            sumA1 =
+                a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
 
+            sumAnol = aNol1 + aNol2 + aNol3 + aNol4 + aNol5 + aNol6 + aNol7 + aNol8 + aNol9 + aNol10
+            var fio = binding.fioEt.text.toString().trim()
 //            Toast.makeText(
 //                binding.root.context,
 //                "Sum A1 Selected A1 = ${sumA1Selected}" + "\nA1=$sumA1" + "\nA2=${sumA2}" + "\nB1=${sumB1}" + "\nB2=${sumB2}" + "\nB3=${sumB3}" + "\nC1=${sumC1}" + "\nC2=${sumC2}" + "\nD1=${sumD1}",
 //                Toast.LENGTH_SHORT
 //            ).show()
+            //  Toast.makeText(binding.root.context, "$sumA2", Toast.LENGTH_SHORT).show()
 
-            if (sumA1Selected2 > 0 || sumA2 >=0) {
 
-                if (sumB1 >= 3) {
+            if (fio != "" && fio != null) {
 
-                    if (sumB2 >= 2) {
-                        //startActivity(Intent(binding.root.context, ResultActivity::class.java))
-                    } else if (sumB2 < 2) {
+//                if (sumAnol == 0) {
+//                    Cache.fio = fio
+//                    Cache.sumAnol = sumAnol
+//                    startActivity(Intent(binding.root.context, ResultActivity::class.java))
+//                }
+
+                if (sumA1Selected2 == 100 || sumA2 >= 0) {
+                    if (sumB1 >= 3 && (sumC1 >= 3 || sumC2 >= 2) && sumD1 >= 0) {
+
+                        Cache.a1 = sumA1
+                        Cache.a2 = sumA2
+
+                        Cache.b1 = sumB1
+                        Cache.b2 = sumB2
+                        Cache.b3 = sumB3
+
+                        Cache.c1 = sumC1
+                        Cache.c2 = sumC2
+
+                        Cache.d1 = sumD1
+                        Cache.fio = fio
+
+
+                        startActivity(Intent(binding.root.context, ResultActivity::class.java))
+                    } else {
+                        Toast.makeText(
+                            binding.root.context,
+                            "$toastB",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
 
-                    if (sumB3 >= 3) {
-                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
-                    } else if (sumB3 < 3) {
-                    }
 
-                    if (sumC1 >= 3) {
-                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
-                    } else if (sumC1 < 3) {
-                    }
-
-                    if (sumC2 >= 2) {
-                       // startActivity(Intent(binding.root.context, ResultActivity::class.java))
-                    } else if (sumC2 < 2) {
-                    }
-
-                    Cache.a1 = sumA1
-                    Cache.a2 = sumA2
-
-                    Cache.b1 = sumB1
-                    Cache.b2 = sumB2
-                    Cache.b3 = sumB3
-
-                    Cache.c1 = sumC1
-                    Cache.c2 = sumC2
-
-                    Cache.d1 = sumD1
-
-
-
-                    startActivity(Intent(binding.root.context, ResultActivity::class.java))
-                } else if (sumB1 < 3) {
+                } else {
                     Toast.makeText(
                         binding.root.context,
-                        "B1 bo'limni kamida 3 ta belgilang",
+                        "$toastA",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
 
-
-
             } else {
                 Toast.makeText(
                     binding.root.context,
-                    "A1 yoki A2 bo'limni belgilang",
+                    "$toastFio",
                     Toast.LENGTH_SHORT
                 ).show()
             }
@@ -945,6 +972,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadRuData() {
+
+        toastFio = "Ф.И.О написать"
+        toastA = "Выберите один из разделов A1 или A2."
+        toastB = "Выберите раздел B1 и разделы C1 или разделы C2 и D1."
+
+        binding.fioEt.hint = "Ф.И.О"
+        binding.fioTv.text = "Имя пользователя"
+
         binding.titleMainHome.text =
             "Алгоритм ранней диагностики дисфункции почек и прогнозирования течения хронической сердечной недостаточности  в условиях первичного звена здравоохранения"
 
@@ -1093,13 +1128,21 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadKrillData() {
+
+        toastFio = "F.I.O kiriting"
+        toastA = "A1 yoki A2 bo'limlardan birini tanlang"
+        toastB = "B1 bo'lim va C1 yoki C2  va D1 bo'limlarni tanlang"
+
+        binding.fioEt.hint = "F.I.O"
+        binding.fioTv.text = "Foydalanuvchi ismi"
+
         binding.titleMainHome.text =
             "SOG‘LIQNI SAQLAShNING BIRLAMChI BO‘G‘INI ShAROITIDA SURUNKALI YuRAK YeTIShMOVChILIGI KEChIShINI PROGNOZLASh VA BUYRAK DISFUNKSIYaSI ERTA TAShXISINING ALGORITMI "
         binding.titleMainA.text =
             "A. Surunkali yurak yetishmovchiligining funksional sinfini aniqlang"
-        binding.titleMainB.text = "V. SYUE klinik belgilarini aniqlash\n" +
+        binding.titleMainB.text = "B. SYUE klinik belgilarini aniqlash\n" +
                 "\n" +
-                "V. SURUNKALI YuRAK YeTIShMOVChILIGINING KLINIK BELGILARI\n"
+                "B. SURUNKALI YuRAK YeTIShMOVChILIGINING KLINIK BELGILARI\n"
         binding.titleMainC.text = "C. Buyraklar faoliyati disfunksiyasining belgilarini belgilang "
         binding.titleMainD.text =
             "D.  Buyraklar faoliyati disfunksiyasining og‘irlik darajasini aniqlash (Koptokchalar filtratsiyasi tezligiga ko‘ra):"
@@ -1110,10 +1153,10 @@ class HomeFragment : Fragment() {
         binding.titleA2.text =
             "A2. 6 daqiqalik yurish sinamasi natijalariga ko‘ra SYUE FSni aniqlash (metr) ____ m"
         binding.titleB1.text =
-            "V1. Kichik qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (3ta belgidan kam bo‘lmagan)"
+            "B1. Kichik qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (3ta belgidan kam bo‘lmagan)"
         binding.titleB2.text =
-            "V2.  Katta qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (2ta belgidan kam bo‘lmagan)"
-        binding.titleB3.text = "V3. Surunkali yurak yetishmovchiligining umumiy belgilari \n" +
+            "B2.  Katta qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (2ta belgidan kam bo‘lmagan)"
+        binding.titleB3.text = "B3. Surunkali yurak yetishmovchiligining umumiy belgilari \n" +
                 "(3ta belgidan kam bo‘lmagan)"
         binding.titleC1.text = "C1. Buyraklar faoliyati disfunksiyasining erta belgilari\n" +
                 "(3ta belgidan kam bo‘lmagan):"
@@ -1189,11 +1232,11 @@ class HomeFragment : Fragment() {
 
         /*  har bir bo'lim savol nomi B1 B2 B3 C1 C2 D bo'lim savol nomalri bo'ladi checkbox ni tepasidagi savol titlelar */
         binding.titleQuestionB1.text =
-            "V1. Kichik qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (3ta belgidan kam bo‘lmagan)"
+            "B1. Kichik qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (3ta belgidan kam bo‘lmagan)"
         binding.titleQuestionB2.text =
-            "V2.  Katta qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (2ta belgidan kam bo‘lmagan)"
+            "B2.  Katta qon aylanish doirasidagi yurak yetishmovchiligining klinik belgilari (2ta belgidan kam bo‘lmagan)"
         binding.titleQuestionB3.text =
-            "V3. Surunkali yurak yetishmovchiligining umumiy belgilari \n" +
+            "B3. Surunkali yurak yetishmovchiligining umumiy belgilari \n" +
                     "(3ta belgidan kam bo‘lmagan)"
 
         binding.titleQuestionC1.text =
@@ -1261,9 +1304,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun clearA1Block() {
-       binding.A1question1RadioButton1.isChecked = false
-       binding.A1question1RadioButton2.isChecked = false
-       binding.A1question1RadioButton3.isChecked = false
+        binding.A1question1RadioButton1.isChecked = false
+        binding.A1question1RadioButton2.isChecked = false
+        binding.A1question1RadioButton3.isChecked = false
 
         binding.A1question2RadioButton1.isChecked = false
         binding.A1question2RadioButton2.isChecked = false

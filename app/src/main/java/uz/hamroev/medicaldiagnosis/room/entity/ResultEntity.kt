@@ -15,6 +15,7 @@ class ResultEntity {
     var diagnos1: String? = null
     var diagnos2: String? = null
     var diagnos3: String? = null
+    var fio: String? = null
 
 
 }

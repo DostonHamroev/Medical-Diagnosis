@@ -36,9 +36,24 @@ object Cache {
             }
         }
 
+    var fio:String?
+        get() = sharedPreferences.getString("fio1","")
+        set(value) = Cache.sharedPreferences.edit() {
+            if (value != null){
+                it.putString("fio1",value)
+            }
+        }
 
 
 
+
+    var sumAnol:Int?
+        get() = sharedPreferences.getInt("sumAnol1",0)
+        set(value) = Cache.sharedPreferences.edit() {
+            if (value != null){
+                it.putInt("sumAnol1",value)
+            }
+        }
 
 
 

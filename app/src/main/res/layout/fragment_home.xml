@@ -45,6 +45,38 @@
                 android:layout_marginEnd="10dp"
                 android:background="#DDD" />
 
+            <TextView
+                android:id="@+id/fio_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="Bemor ism familyasi"/>
+
+            <EditText
+                android:id="@+id/fio_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/back_edit"
+                android:hint="F.I.O"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDD" />
+
+
             <!--        A block-->
             <com.gigamole.library.ShadowLayout
                 android:layout_width="match_parent"

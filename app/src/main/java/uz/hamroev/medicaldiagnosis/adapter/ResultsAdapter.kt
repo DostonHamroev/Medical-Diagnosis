@@ -11,7 +11,7 @@ import uz.hamroev.medicaldiagnosis.room.entity.ResultEntity
 
 class ResultsAdapter(
     var context: Context,
-    var list: ArrayList<ResultEntity>,
+    var list: List<ResultEntity>,
     var onMyClickListener: OnMyClickListener
 ) :
     RecyclerView.Adapter<ResultsAdapter.VhResult>() {
@@ -26,6 +26,7 @@ class ResultsAdapter(
             itemResultsBinding.variant.text = resultEntity.variant
             itemResultsBinding.diagnos.text = resultEntity.diagnos
             itemResultsBinding.date.text = resultEntity.date
+            itemResultsBinding.fio.text = resultEntity.fio
 
             itemResultsBinding.share.setOnClickListener {
                 onMyClickListener.onShare(resultEntity, position)

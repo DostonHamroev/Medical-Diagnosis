@@ -37,6 +37,22 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+
+                <TextView
+                    android:id="@+id/fio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/source_sand_pro_regular"
+                    android:gravity="start"
+                    android:padding="2dp"
+                    android:paddingRight="5dp"
+                    android:text="Doston Hamroyev Davron o'gli "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/variant"
                     android:layout_width="match_parent"
@@ -98,8 +114,8 @@
                     app:lottie_autoPlay="true"
                     app:lottie_fileName="share.json"
                     app:lottie_loop="true"
-                    app:lottie_speed="0.5"
-                    app:lottie_repeatMode="reverse" />
+                    app:lottie_repeatMode="reverse"
+                    app:lottie_speed="0.5" />
 
             </LinearLayout>
 
