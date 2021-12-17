@@ -2,7 +2,6 @@ package uz.hamroev.medicaldiagnosis.activity
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.ActivityResultBinding
@@ -28,6 +27,8 @@ class ResultActivity : AppCompatActivity() {
     var c2 = Cache.c2
 
     var d1 = Cache.d1
+
+    var diagnosMessage = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -188,33 +189,53 @@ class ResultActivity : AppCompatActivity() {
 
     private fun loadRUVariant2() {
 
-//        Toast.makeText(binding.root.context, "$a1", Toast.LENGTH_SHORT).show()
-//        Toast.makeText(binding.root.context, "$a2", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(binding.root.context, "$a1", Toast.LENGTH_SHORT).show()
+        //  Toast.makeText(binding.root.context, "$a2", Toast.LENGTH_SHORT).show()
 
         if (a1!! >= 1 || a1!! <= 3) {
-            binding.diagnosResult.text = "XCH I FK I"
+            diagnosMessage = "XCH I FK I"
+            binding.diagnosResult.text = diagnosMessage
         } else if (a1!! >= 4 || a1!! <= 6) {
-            binding.diagnosResult.text = "XCH I FK II"
+            diagnosMessage = "XCH I FK II"
+            binding.diagnosResult.text = diagnosMessage
         } else if (a1!! >= 7 || a1!! <= 9) {
-            binding.diagnosResult.text = "XCH I FK III"
+            diagnosMessage = "XCH I FK III"
+            binding.diagnosResult.text = diagnosMessage
         } else if (a1!! > 9) {
-            binding.diagnosResult.text = "XCH I FK IV"
+            diagnosMessage = "XCH I FK IV"
+            binding.diagnosResult.text = diagnosMessage
         }
+
+        if (a2!! == 0) {
+            diagnosMessage = "XCH I FK I"
+            binding.diagnosResult.text = diagnosMessage
+        } else if (a2!! == 1) {
+            diagnosMessage = "XCH I FK II"
+            binding.diagnosResult.text = diagnosMessage
+        } else if (a2!! == 2) {
+            diagnosMessage = "XCH I FK III"
+            binding.diagnosResult.text = diagnosMessage
+        } else if (a2!! == 3) {
+            diagnosMessage = "XCH I FK IV"
+            binding.diagnosResult.text = diagnosMessage
+        }
+
 
 
         binding.diagnosVariant.text = "2-вариант"
         binding.diagnosTv.text = "Диагноз"
-        binding.diagnosResult.text = ""
         binding.diagnosResultTable1.text = "КОНСУЛЬТАЦИЯ КАРДИОЛОГА\n" + "ЭКГ+ ЭХОКГ\n"
         binding.diagnosResultTable2.text =
             "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\n" + "НИЗКИЙ РИСК ССО\n" + "ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"
         binding.diagnosResultTable3.text =
             "Контроль употребляемой жидкости, употребляемой пищевой соли,  контроль диуреза, \n" + "Контроль своевременного  приема ЛС"
 
+
+
         var result = ResultEntity()
         result.date = getCurrentDateAndTime()
         result.variant = "2-вариант"
-        result.diagnos = ""
+        result.diagnos = diagnosMessage
         result.diagnos1 = "КОНСУЛЬТАЦИЯ КАРДИОЛОГА\\n\" + \"ЭКГ+ ЭХОКГ\\n"
         result.diagnos2 =
             "ПРОГНОЗ БЛАГОПРИЯТНЫЙ,\\n\" + \"НИЗКИЙ РИСК ССО\\n\" + \"ВЕДЕНИЕ БОЛЬНЫХ НА ФОНЕ ОПТИМАЛЬНОЙ МЕДИКАМЕНТОЗНОЙ ТЕРАПИИ ХСН (иАПФ, БАБ, АМКР)"

@@ -859,8 +859,7 @@ class HomeFragment : Fragment() {
             sumB2 = b2CheckBox1 + b2CheckBox2 + b2CheckBox3 + b2CheckBox4
             sumB1 =
                 b1CheckBox1 + b1CheckBox2 + b1CheckBox3 + b1CheckBox4 + b1CheckBox5 + b1CheckBox6
-            sumA1 =
-                a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
+            sumA1 = a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
 
 //            Toast.makeText(
 //                binding.root.context,
@@ -868,7 +867,7 @@ class HomeFragment : Fragment() {
 //                Toast.LENGTH_SHORT
 //            ).show()
 
-            if (sumA1Selected == 100 || sumA1Selected2 == 100) {
+            if (sumA1Selected2 > 0 || sumA2 >=0) {
 
                 if (sumB1 >= 3) {
 
