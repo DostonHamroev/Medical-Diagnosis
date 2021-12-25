@@ -49,24 +49,23 @@
                 android:id="@+id/fio_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="5dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:gravity="center"
                 android:layout_gravity="center_horizontal"
-                android:text="Bemor ism familyasi"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="Bemor ism familyasi"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/fio_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:padding="10dp"
                 android:background="@drawable/back_edit"
                 android:hint="F.I.O"
-                />
+                android:padding="10dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -1355,6 +1354,7 @@
             </LinearLayout>
             <!--        A2 block down | A2 bo'lim pastda -->
             <LinearLayout
+                android:id="@+id/umumiyA2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -1565,6 +1565,7 @@
 
             <!-- Line -->
             <View
+                android:id="@+id/view3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
@@ -1612,6 +1613,7 @@
             </com.gigamole.library.ShadowLayout>
             <!--            B1 block down | B1 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyB1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -1791,6 +1793,7 @@
             </LinearLayout>
             <!--            B2 block down | B2 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyB2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -1955,6 +1958,7 @@
             </LinearLayout>
             <!--            B3 block down | B3 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyB3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -2151,6 +2155,7 @@
 
             <!-- Line -->
             <View
+                android:id="@+id/view4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
@@ -2160,6 +2165,7 @@
 
             <!--            C block-->
             <com.gigamole.library.ShadowLayout
+                android:id="@+id/shadowC"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:visibility="visible"
@@ -2196,6 +2202,7 @@
             </com.gigamole.library.ShadowLayout>
             <!--            C1 block down | C1 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyC1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -2375,6 +2382,7 @@
             </LinearLayout>
             <!--            C2 block down | C2 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyC2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -2548,6 +2556,7 @@
 
             <!-- Line -->
             <View
+                android:id="@+id/view5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
@@ -2557,6 +2566,7 @@
 
             <!--            D block-->
             <com.gigamole.library.ShadowLayout
+                android:id="@+id/shadowD"
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
                 android:visibility="visible"
@@ -2594,6 +2604,7 @@
             </com.gigamole.library.ShadowLayout>
             <!--            D1 block down | D1 bo'lim pastda-->
             <LinearLayout
+                android:id="@+id/umumiyD1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
@@ -2833,6 +2844,7 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </com.gigamole.library.ShadowLayout>
+
 
 
         </LinearLayout>

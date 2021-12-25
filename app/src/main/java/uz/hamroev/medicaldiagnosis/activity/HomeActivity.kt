@@ -37,6 +37,10 @@ class HomeActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
     lateinit var drawerLayout: DrawerLayout
     lateinit var mediaPlayer: MediaPlayer
+    var isBack = false
+    lateinit var handler: Handler
+    var doubleToast = "Chiqish uchun 2 marta bosing"
+    lateinit var handlerCheckA1: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -110,7 +114,7 @@ class HomeActivity : AppCompatActivity() {
                     try {
                         val intent = Intent(Intent.ACTION_SEND)
                         intent.setType("text/plain")
-                        intent.putExtra(Intent.EXTRA_SUBJECT, "Share Medical-Diagnosis")
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Medical-Diagnosis")
                         val shareMessage: String =
                             "https://play.google.com/store/apps/details?id=" + packageName
                         intent.putExtra(Intent.EXTRA_TEXT, shareMessage)
@@ -218,8 +222,8 @@ class HomeActivity : AppCompatActivity() {
                     opinionGmail.setOnClickListener {
                         val intent = Intent(Intent.ACTION_SEND)
                         intent.type = "text/plain"
-                        intent.putExtra(Intent.EXTRA_SUBJECT,"")
-                        intent.putExtra(Intent.EXTRA_TEXT,"")
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "")
+                        intent.putExtra(Intent.EXTRA_TEXT, "")
                         startActivity(intent)
                         dialog.dismiss()
                     }
@@ -251,6 +255,14 @@ class HomeActivity : AppCompatActivity() {
         startActivity(Intent(Intent.ACTION_VIEW, uri))
     }
 
+
+    override fun onResume() {
+        replaceFragment(HomeFragment())
+        super.onResume()
+    }
+
+
+
     private fun checkLanguage() {
         when (Cache.til) {
             "krill" -> {
@@ -263,13 +275,26 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun loadRuData() {
-
+        doubleToast = "Нажмите 2 раза, для выйти"
     }
 
     private fun loadKrillData() {
-
+        doubleToast = "Chiqish uchun 2 marta bosing"
     }
 
+
+    override fun onBackPressed() {
+        if (isBack) {
+            super.onBackPressed()
+            return
+        }
+        this.isBack = true
+        handler = Handler(Looper.getMainLooper())
+        Toast.makeText(this, "$doubleToast", Toast.LENGTH_SHORT).show()
+        handler.postDelayed({
+            isBack = false
+        }, 1000)
+    }
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

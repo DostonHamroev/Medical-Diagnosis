@@ -3,6 +3,8 @@ package uz.hamroev.medicaldiagnosis.fragment
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +42,9 @@ class HomeFragment : Fragment() {
     }
 
     lateinit var binding: FragmentHomeBinding
+    lateinit var handlerCheckA1: Handler
+
+
     var isOpen = false
     var isOpenA2 = false
 
@@ -145,6 +150,8 @@ class HomeFragment : Fragment() {
     var toastA = ""
     var toastB = ""
     var toastC = ""
+
+    private  val TAG = "TTTT"
 
     @SuppressLint("ResourceAsColor")
     override fun onCreateView(
@@ -312,7 +319,9 @@ class HomeFragment : Fragment() {
                     binding.resultBtnBackground.setBackgroundResource(R.color.azure)
                     binding.bottomBodyA2.visibility = View.GONE
                     binding.topTitleMainA2.visibility = View.GONE
+                    checkA1Sum()
                     a1Question1 = 0
+
                 }
                 R.id.A1question1_RadioButton2 -> {
                     a1QuestionSelect1 = 0
@@ -343,6 +352,7 @@ class HomeFragment : Fragment() {
                     a1Question2 = 0
                     a1QuestionSelect2 = 0
                     a1QuestionSelect2 = 10
+                    checkA1Sum()
                 }
                 R.id.A1question2_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -364,6 +374,7 @@ class HomeFragment : Fragment() {
                     a1Question3 = 0
                     a1QuestionSelect3 = 0
                     a1QuestionSelect3 = 10
+                    checkA1Sum()
                 }
                 R.id.A1question3_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -385,6 +396,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect4 = 0
                     a1QuestionSelect4 = 10
                     a1Question4 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question4_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -421,6 +433,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect5 = 0
                     a1QuestionSelect5 = 10
                     a1Question5 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question5_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -450,6 +463,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect6 = 0
                     a1QuestionSelect6 = 10
                     a1Question6 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question6_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -487,6 +501,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect7 = 0
                     a1QuestionSelect7 = 10
                     a1Question7 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question7_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -507,6 +522,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect8 = 0
                     a1QuestionSelect8 = 10
                     a1Question8 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question8_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -535,6 +551,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect9 = 0
                     a1QuestionSelect9 = 10
                     a1Question9 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question9_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -571,6 +588,7 @@ class HomeFragment : Fragment() {
                     a1QuestionSelect10 = 0
                     a1QuestionSelect10 = 10
                     a1Question10 = 0
+                    checkA1Sum()
                 }
                 R.id.A1question10_RadioButton2 -> {
                     binding.bottomBodyA2.visibility = View.GONE
@@ -866,14 +884,9 @@ class HomeFragment : Fragment() {
         }
 
 
-
-
-
-
-
-
-
-
+//        handlerCheckA1 = Handler(Looper.getMainLooper())
+//        handlerCheckA1.postDelayed(runnable, 100)
+//
 
 
         binding.resultBtn.setOnClickListener {
@@ -909,7 +922,7 @@ class HomeFragment : Fragment() {
 //                }
 
                 if (sumA1Selected2 == 100 || sumA2 >= 0) {
-                    if (sumB1 >= 3 && (sumC1 >= 3 || sumC2 >= 2) && sumD1 >= 0) {
+                    if ((sumB1 >= 3  && sumD1 >= 0) || sumA1 == 0) {
 
                         Cache.a1 = sumA1
                         Cache.a2 = sumA2
@@ -959,6 +972,50 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    private fun checkA1Sum() {
+        var sumA1Selected2 =
+            a1QuestionSelect1 + a1QuestionSelect2 + a1QuestionSelect3 + a1QuestionSelect4 + a1QuestionSelect5 + a1QuestionSelect6 + a1QuestionSelect7 + a1QuestionSelect8 + a1QuestionSelect9 + a1QuestionSelect10
+
+        if (sumA1Selected2 == 100) {
+            sumA1 =
+                a1Question1 + a1Question2 + a1Question3 + a1Question4 + a1Question5 + a1Question6 + a1Question7 + a1Question8 + a1Question9 + a1Question10
+            if (sumA1 == 0) {
+                binding.shadowB.visibility = View.GONE
+                binding.shadowC.visibility = View.GONE
+                binding.shadowD.visibility = View.GONE
+
+                binding.umumiyA2.visibility = View.GONE
+                binding.umumiyB1.visibility = View.GONE
+                binding.umumiyB2.visibility = View.GONE
+                binding.umumiyB3.visibility = View.GONE
+                binding.umumiyC1.visibility = View.GONE
+                binding.umumiyC2.visibility = View.GONE
+                binding.umumiyD1.visibility = View.GONE
+
+                binding.view3.visibility = View.GONE
+                binding.view4.visibility = View.GONE
+                binding.view5.visibility = View.GONE
+
+            }
+        }
+    }
+
+    private var runnable = object : Runnable {
+        override fun run() {
+            var sumA1Selected2 =
+                a1QuestionSelect1 + a1QuestionSelect2 + a1QuestionSelect3 + a1QuestionSelect4 + a1QuestionSelect5 + a1QuestionSelect6 + a1QuestionSelect7 + a1QuestionSelect8 + a1QuestionSelect9 + a1QuestionSelect10
+
+            if (sumA1Selected2 == 100) {
+                if (sumA1 == 0) {
+                    Toast.makeText(binding.root.context, "A = 0 bo'ldi", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            handlerCheckA1.postDelayed(this, 100)
+        }
+
+    }
+
 
     private fun checkLanguage() {
         when (Cache.til) {
@@ -973,9 +1030,10 @@ class HomeFragment : Fragment() {
 
     private fun loadRuData() {
 
+        binding.resultBtn.text = "Результат"
         toastFio = "Ф.И.О написать"
         toastA = "Выберите один из разделов A1 или A2."
-        toastB = "Выберите раздел B1 и разделы C1 или разделы C2 и D1."
+        toastB = "Выберите раздел B1 и D1."
 
         binding.fioEt.hint = "Ф.И.О"
         binding.fioTv.text = "Имя пользователя"
@@ -1128,16 +1186,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadKrillData() {
-
+        binding.resultBtn.text = "Natija"
         toastFio = "F.I.O kiriting"
         toastA = "A1 yoki A2 bo'limlardan birini tanlang"
-        toastB = "B1 bo'lim va C1 yoki C2  va D1 bo'limlarni tanlang"
+        toastB = "B1 bo'lim  va D1 bo'limlarni tanlang"
 
         binding.fioEt.hint = "F.I.O"
         binding.fioTv.text = "Foydalanuvchi ismi"
 
         binding.titleMainHome.text =
-            "SOG‘LIQNI SAQLAShNING BIRLAMChI BO‘G‘INI ShAROITIDA SURUNKALI YuRAK YeTIShMOVChILIGI KEChIShINI PROGNOZLASh VA BUYRAK DISFUNKSIYaSI ERTA TAShXISINING ALGORITMI "
+            "Sog'liqni Saqlashning Birlamchi Bo'g'ini Sharoitida Surunkali Yurak Yetishmovchiligi Kechishini Prognozlash va Buyrak Disfunksiyasini erta Tashxisining Algoritmi "
         binding.titleMainA.text =
             "A. Surunkali yurak yetishmovchiligining funksional sinfini aniqlang"
         binding.titleMainB.text = "B. SYUE klinik belgilarini aniqlash\n" +
@@ -1292,7 +1350,24 @@ class HomeFragment : Fragment() {
     }
 
     override fun onResume() {
-        super.onResume()
+
+        binding.fioEt.setText("")
+        binding.shadowB.visibility = View.VISIBLE
+        binding.shadowC.visibility = View.VISIBLE
+        binding.shadowD.visibility = View.VISIBLE
+
+        binding.umumiyA2.visibility = View.VISIBLE
+        binding.umumiyB1.visibility = View.VISIBLE
+        binding.umumiyB2.visibility = View.VISIBLE
+        binding.umumiyB3.visibility = View.VISIBLE
+        binding.umumiyC1.visibility = View.VISIBLE
+        binding.umumiyC2.visibility = View.VISIBLE
+        binding.umumiyD1.visibility = View.VISIBLE
+
+        binding.view3.visibility = View.VISIBLE
+        binding.view4.visibility = View.VISIBLE
+        binding.view5.visibility = View.VISIBLE
+
         clearA1Block()
         clearA2Block()
         clearB1Block()
@@ -1301,6 +1376,8 @@ class HomeFragment : Fragment() {
         clearC1Block()
         clearC2Block()
         clearD1Block()
+        Log.d(TAG, "onResume: ")
+        super.onResume()
     }
 
     private fun clearA1Block() {
