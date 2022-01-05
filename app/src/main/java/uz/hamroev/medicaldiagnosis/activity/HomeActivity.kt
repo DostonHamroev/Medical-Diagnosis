@@ -26,6 +26,7 @@ import com.google.android.material.navigation.NavigationView
 import uz.hamroev.medicaldiagnosis.R
 import uz.hamroev.medicaldiagnosis.cache.Cache
 import uz.hamroev.medicaldiagnosis.databinding.ActivityHomeBinding
+import uz.hamroev.medicaldiagnosis.databinding.DialogLanguageBinding
 import uz.hamroev.medicaldiagnosis.fragment.AuthorFragment
 import uz.hamroev.medicaldiagnosis.fragment.HomeFragment
 import uz.hamroev.medicaldiagnosis.fragment.NatijalarFragment
@@ -78,15 +79,16 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 R.id.nav_settings -> {
-                    val alertDialog = AlertDialog.Builder(binding.root.context)
+                    val alertDialog =
+                        AlertDialog.Builder(binding.root.context, R.style.RoundedCornersDialog)
                     val dialog = alertDialog.create()
-                    val dialogView = layoutInflater.inflate(R.layout.dialog_language, null, false)
-                    dialog.setView(dialogView)
-                    dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+//                    val dialogView = layoutInflater.inflate(R.layout.dialog_language, null, false)
+                    val dialogView = DialogLanguageBinding.inflate(layoutInflater)
+                    dialog.setView(dialogView.root)
+//                    dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
                     dialog.setCancelable(false)
 
-                    val rus = dialogView.findViewById<LinearLayout>(R.id.linear_rus)
-                    rus.setOnClickListener {
+                    dialogView.linearRus.setOnClickListener {
                         Cache.til = "ru"
                         replaceFragment(HomeFragment())
                         mediaPlayer = MediaPlayer.create(this, R.raw.rus)
@@ -94,8 +96,7 @@ class HomeActivity : AppCompatActivity() {
                         dialog.dismiss()
                     }
 
-                    val uzb = dialogView.findViewById<LinearLayout>(R.id.linear_uzb)
-                    uzb.setOnClickListener {
+                    dialogView.linearUzb.setOnClickListener {
                         Cache.til = "krill"
                         mediaPlayer = MediaPlayer.create(this, R.raw.krill)
                         mediaPlayer.start()
@@ -260,7 +261,6 @@ class HomeActivity : AppCompatActivity() {
         replaceFragment(HomeFragment())
         super.onResume()
     }
-
 
 
     private fun checkLanguage() {
