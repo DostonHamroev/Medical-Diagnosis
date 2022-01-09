@@ -20,6 +20,8 @@
         <entry key="app/src/main/res/drawable/back_result2.xml" value="0.16574074074074074" />
         <entry key="app/src/main/res/drawable/back_result3.xml" value="0.16574074074074074" />
         <entry key="app/src/main/res/drawable/back_result_card.xml" value="0.16574074074074074" />
+        <entry key="app/src/main/res/drawable/block_bottom_shape_a.xml" value="0.17587719298245613" />
+        <entry key="app/src/main/res/drawable/block_top_shape_a.xml" value="0.17587719298245613" />
         <entry key="app/src/main/res/drawable/c1_bottom_shape.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/c1_top_shape.xml" value="0.1735930735930736" />
         <entry key="app/src/main/res/drawable/checkbox_selector.xml" value="0.1735930735930736" />
@@ -39,12 +41,21 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.16203703703703703" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.30925925925925923" />
         <entry key="app/src/main/res/layout/activity_result.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/block_a1.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/block_a2.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_b1.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_b2.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_b3.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_c1.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_c2.xml" value="0.16228070175438597" />
+        <entry key="app/src/main/res/layout/block_d1.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_info_result.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_language.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_not_internet.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/dialog_opinion.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_author.xml" value="0.16228070175438597" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.208803611738149" />
+        <entry key="app/src/main/res/layout/fragment_main.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_natijalar.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_author.xml" value="0.1361111111111111" />

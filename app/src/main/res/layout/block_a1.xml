@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/top_linear_a1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@drawable/block_top_shape_a"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/title_A1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:gravity="start"
+                    android:paddingLeft="5dp"
+                    android:text="A1. По баллам шкаламы оценки клинического состаяния По баллам шкаламы оценки клинического состаяния"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="4">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/down_to_up_lottie"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="down.json"
+                    app:lottie_loop="true" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_linear_a1"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/block_bottom_shape_a"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_linear_a1"
+            android:layout_height="wrap_content">
+
+            <!-- har bir savol uchun card viewni ichida radio buttonlar -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="1. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question1_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question1_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question1_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question1_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="1. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question2_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question2_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+
+                                <RadioButton
+                                    android:id="@+id/A1question2_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="3. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question3_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question3_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question3_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="4. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question4_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question4_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question4_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question4_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question4_RadioButton4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="5. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question5_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question5_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question5_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question5_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="6. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question6_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question6_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question6_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question6_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question6_RadioButton4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="7. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question7_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question7_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+
+                                <RadioButton
+                                    android:id="@+id/A1question7_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="8. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question8_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question8_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question8_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question8_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="9. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question9_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question9_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question9_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question9_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question9_RadioButton4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/A1question10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/source_sand_pro_regular"
+                        android:padding="5dp"
+                        android:text="10. Одышка: "
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#DDD" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="10" />
+
+                        <!--                                    Radio gruop shuni ichida-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:padding="10dp">
+
+                            <RadioGroup
+                                android:id="@+id/A1question10_RadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="10dp"
+                                android:gravity="start"
+                                android:orientation="vertical">
+
+                                <RadioButton
+                                    android:id="@+id/A1question10_RadioButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="0 - нет"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question10_RadioButton2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="1 - при нагрузки"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/A1question10_RadioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/radio_selector"
+                                    android:button="@android:color/transparent"
+                                    android:checked="false"
+                                    android:elevation="2dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="2 - в покое"
+                                    android:textColor="@drawable/radio_text"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

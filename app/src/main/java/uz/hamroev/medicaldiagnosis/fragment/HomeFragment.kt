@@ -1011,7 +1011,7 @@ class HomeFragment : Fragment() {
                 }
             }
 
-            handlerCheckA1.postDelayed(this, 100)
+           // handlerCheckA1.postDelayed(this, 100)
         }
 
     }
