@@ -70,7 +70,7 @@ class AuthorFragment : Fragment() {
         list.add(Author("Kamilova \nUmida \nKabirovna","m. f. d., professor, O'zbekiston Respublikasi Sog'liqni saqlash vazirligi Respublika ixtisoslashtirilgan terapiya va tibbiy reabilitatsiya ilmiy-amaliy tibbiyot markazi, ilmiy ishlar bo'yicha direktori",R.drawable.ic_umida))
         list.add(Author("Saida\nBeknazarova\nSafibullayevna","Professor\nt.f.d.\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Аudiovizual texnologiyalar kafedrasi professori", R.drawable.ic_saida))
         list.add(Author("Ataxodjaeva \nGulchehra \nAbdunabievna","t.f.d\nToshkent pediatriya tibbiyot instituti",R.drawable.ic_gulchehra))
-        list.add(Author("Abdullaeva \n" + "Charoch \n" + "Abdudjalilovna","", R.drawable.ic_charos))
+        list.add(Author("Abdullaeva \n" + "Charos \n" + "Abdudjalilovna","T.f.d., dotsent Respublika ixtisoslashtirilgan terapiya va tibbiy reabilitasiya ilmiy-amaliy tibbiyot markazi", R.drawable.ic_charos))
         list.add(Author("Masharipova \n" + "Dilyafruz \n" + "Raxmatillaevna","Ilmiy kotib \"Respublika ixtisoslashtirilgan teraiya va tibbiy reabilitasiya ilmiy-amaliy tibbiyot markazi\" DM", R.drawable.ic_dilafruz))
         list.add(Author("Doston\nHamroyev\nDavron o'g'li","Android Dasturchi\n\nMuhammad al-Xorazmiy nomidagi Toshkent Аxborot texnologiyalari universiteti Televizion Texnologiyalari fakulteti talabasi", R.drawable.ic_doston))
     }
@@ -82,7 +82,7 @@ class AuthorFragment : Fragment() {
         list.add(Author("Камилова \nУмида \nКабировна","д.м.н., профессор, директор по научной работе Республиканского специализированного научно-практического медицинского центра терапии и медицинской реабилитации Министерства Здравоохранения Республики Узбекистан",R.drawable.ic_umida))
         list.add(Author("Бекназарова \nСаида \n" + "Сафибуллаевна","Профессор\nд.т.н.\nПрофессор кафедры аудиовизуальные технологии Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_saida))
         list.add(Author("Атаходжаева \nГулчехра \nАбдунабиевна","д.м.н.\nТашкентский педиатрический медицинский институт",R.drawable.ic_gulchehra))
-        list.add(Author("Абдуллаева \nЧароч \nАбдуджалиловна","д.м.н., доцент кафедры функциональной диагностики Центра", R.drawable.ic_charos))
+        list.add(Author("Абдуллаева \nЧарос \nАбдуджалиловна","Д.м.н., доцент Республиканского специализированного научно-практического медицинского центра терапии и медицинской реабилитации\" ", R.drawable.ic_charos))
         list.add(Author("Машарипова \nДиляфруз \nРахматиллаевна","Ученый секретарь, \n" + "ГУ \"Республиканский специализированный научно-практический медицинский центр терапии и медицинской реабилитации\"", R.drawable.ic_dilafruz))
         list.add(Author("Достон \nҲамроев \nДавронович","Андроид разработчик\n\nСтудент Факультет Телевизионных технологий Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми", R.drawable.ic_doston))
     }

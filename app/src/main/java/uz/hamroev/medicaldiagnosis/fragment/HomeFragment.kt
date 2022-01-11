@@ -922,7 +922,7 @@ class HomeFragment : Fragment() {
 //                }
 
                 if (sumA1Selected2 == 100 || sumA2 >= 0) {
-                    if ((sumB1 >= 3  && sumD1 >= 0) || sumA1 == 0) {
+                    if ((sumD1 >= 0) || sumA1 == 0) {
 
                         Cache.a1 = sumA1
                         Cache.a2 = sumA2
@@ -1033,7 +1033,7 @@ class HomeFragment : Fragment() {
         binding.resultBtn.text = "Результат"
         toastFio = "Ф.И.О написать"
         toastA = "Выберите один из разделов A1 или A2."
-        toastB = "Выберите раздел B1 и D1."
+        toastB = "Выберите раздел D1."
 
         binding.fioEt.hint = "Ф.И.О"
         binding.fioTv.text = "Имя пользователя"
